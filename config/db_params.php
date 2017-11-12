@@ -6,4 +6,5 @@ return array(
     'dbname' => 'phpshop',
     'user' => 'root',
     'password' => '1234',
+    я что то поменял
 );
