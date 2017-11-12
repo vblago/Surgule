@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 
 // Массив с параметрами подключения к базе данных
 return array(
-    'host' => 'localhost',
+    'host' => 'localhost:8889',
     'dbname' => 'phpshop',
     'user' => 'root',
-    'password' => '1111',
+    'password' => '1234',
 );
