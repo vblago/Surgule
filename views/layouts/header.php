@@ -18,9 +18,15 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="../template/css/owl.carousel.css">
     <link rel="stylesheet" href="../template/css/style.css">
     <link rel="stylesheet" href="../template/css/responsive.css">
+=======
+    <link rel="stylesheet" href="/project/css/owl.carousel.css">
+    <link rel="stylesheet" href="/project/style.css">
+    <link rel="stylesheet" href="/project/css/responsive.css">
+>>>>>>> 61124b431128fad6de923302d32286bdaaec2ad3
    
   </head>
   <body>
