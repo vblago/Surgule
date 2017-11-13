@@ -11,6 +11,21 @@ class SiteController
      */
     public function actionIndex()
     {
+
+        $productsInCart = Cart::getProducts();
+
+        if ($productsInCart) {
+            // Если в корзине есть товары, получаем полную информацию о товарах для списка
+            // Получаем массив только с идентификаторами товаров
+            $productsIds = array_keys($productsInCart);
+
+            // Получаем массив с полной информацией о необходимых товарах
+            $products = Product::getProdustsByIds($productsIds);
+
+            // Получаем общую стоимость товаров
+            $totalPrice = Cart::getTotalPrice($products);
+        }
+        
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
 

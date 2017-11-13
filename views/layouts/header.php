@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/template/css/owl.carousel.css">
-    <link rel="stylesheet" href="template/css/style.css">
-    <link rel="stylesheet" href="template/css/responsive.css">
+    <link rel="stylesheet" href="../template/css/owl.carousel.css">
+    <link rel="stylesheet" href="../template/css/style.css">
+    <link rel="stylesheet" href="../template/css/responsive.css">
    
   </head>
   <body>
@@ -74,7 +74,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="/cart/">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="/cart/">Cart - <span class="cart-amunt"><?php echo $totalPrice;?></span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
