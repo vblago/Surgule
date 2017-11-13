@@ -68,13 +68,13 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="home.php">e<span>Electronics</span></a></h1>
+                        <h1><a href="home.php"><span>Jogle</span></a></h1>
                     </div>
                 </div>
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.php">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="/cart/">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -94,13 +94,11 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="#">Shop page</a></li>
-                        <li><a href="single_product.php">Single product</a></li>
-                        <li><a href="/cart/">Cart</a></li>
-                        <li><a href="checkout.php">Checkout</a></li>
-                        <li><a href="/catalog/">Category</a></li>
-                        <li><a href="/contacts/">Contact</a></li>
+                        <li class="active"><a href="/">Домашня</a></li>
+                        <li><a href="/catalog/">Магазин</a></li>
+                        <li><a href="/contacts/">Контакти</a></li>
+                        <li><a href="user/register">Single product</a></li>
+                        <li><a href="user/login">Checkout</a></li>
                     </ul>
                 </div>  
             </div>
