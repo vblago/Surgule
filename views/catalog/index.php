@@ -5,13 +5,13 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="left-sidebar">
-                   
+<!--                    <h1> common categor</h1>-->
                     <div class="panel-group category-products">
                         <?php foreach ($categories as $categoryItem): ?>
                             <div  class="panel panel-default">
                                 <div id="cat" class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a style="align-self:  center" href="/category/<?php echo $categoryItem['id'];?>">
+                                        <a  href="/category/<?php echo $categoryItem['id'];?>">
                                             <?php echo $categoryItem['name'];?>
                                         </a>
                                     </h4>

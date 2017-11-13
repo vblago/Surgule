@@ -1006,10 +1006,10 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 /*category*/
 #cat{
     border-radius: 5px;
-    
     background-color: #4fc657;
     color: white;
-    
-    
-   
+}
+#nav {
+    position: absolute;
+    bottom: 0;
 }

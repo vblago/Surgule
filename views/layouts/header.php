@@ -63,7 +63,7 @@
         </div>
     </div> <!-- End header area -->
     
-    <div class="site-branding-area">
+    <div style="height: 100px; align-items:  top"class="site-branding-area">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
