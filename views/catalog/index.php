@@ -1,17 +1,17 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 <section>
-    <div class="container">
+    <div class="container" style="margin-top: 20px">
         <div class="row">
             <div class="col-sm-3">
                 <div class="left-sidebar">
-                    <h2>Каталог</h2>
+<!--                    <h1> common categor</h1>-->
                     <div class="panel-group category-products">
                         <?php foreach ($categories as $categoryItem): ?>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
+                            <div  class="panel panel-default">
+                                <div id="cat" class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a href="/category/<?php echo $categoryItem['id'];?>">
+                                        <a  href="/category/<?php echo $categoryItem['id'];?>">
                                             <?php echo $categoryItem['name'];?>
                                         </a>
                                     </h4>
@@ -27,11 +27,11 @@
                     <h2 class="title text-center">Последние товары</h2>
                     
                     <?php foreach ($latestProducts as $product): ?>
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                                <div class="single-products" style="height: 400px;">
+                                    <div class="productinfo text-center" >
+                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" >
                                         <h2>$<?php echo $product['price'];?></h2>
                                         <p>
                                             <a href="/product/<?php echo $product['id'];?>">

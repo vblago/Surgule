@@ -86,13 +86,13 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
     <!-- jQuery sticky menu -->
-    <script src="/template/js/owl.carousel.min.js"></script>
-    <script src="/template/js/jquery.sticky.js"></script>
+    <script src="/project/js/owl.carousel.min.js"></script>
+    <script src="/project/js/jquery.sticky.js"></script>
     
     <!-- jQuery easing -->
-    <script src="/template/js/jquery.easing.1.3.min.js"></script>
+    <script src="/project/js/jquery.easing.1.3.min.js"></script>
     
     <!-- Main Script -->
-    <script src="/template/js/main.js"></script>
+    <script src="/project/js/main.js"></script>
   </body>
 </html>
