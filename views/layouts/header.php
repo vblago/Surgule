@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/template/css/owl.carousel.css">
-    <link rel="stylesheet" href="template/css/style.css">
-    <link rel="stylesheet" href="template/css/responsive.css">
+    <link rel="stylesheet" href="../template/css/owl.carousel.css">
+    <link rel="stylesheet" href="../template/css/style.css">
+    <link rel="stylesheet" href="../template/css/responsive.css">
    
   </head>
   <body>
@@ -98,7 +98,8 @@
                         <li><a href="/catalog/">Магазин</a></li>
                         <li><a href="/contacts/">Контакти</a></li>
                         <li><a href="user/register">Single product</a></li>
-                        <li><a href="user/login">Checkout</a></li>
+                        <li> <a href="/product/<?php echo 45;?>">
+                                                </a></li>
                     </ul>
                 </div>  
             </div>

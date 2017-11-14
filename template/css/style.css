@@ -765,7 +765,9 @@ form.cart {
 .related-products-title {color: #3dc6ab;
 font-size: 25px;
 margin-bottom: 30px;
-text-transform: uppercase;}
+text-transform: uppercase;
+text-align: center;
+}
 
 .related-products-wrapper .owl-nav {
   position: absolute;
