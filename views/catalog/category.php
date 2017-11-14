@@ -1,4 +1,4 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include ROOT . '../views/layouts/header.php'; ?>
 <section>
     <div style="margin-top: 20px"class="container">
         <div class="row">
@@ -8,7 +8,7 @@
                     <div class="panel-group category-products">
                         <?php foreach ($categories as $categoryItem): ?>
                             <div class="panel panel-default">
-                                <div id="category_style" class="panel-heading">
+                                <div id="cat" class="panel-heading">
                                     <h4 class="panel-title">
                                         <a href="/category/<?php echo $categoryItem['id']; ?>"
                                            class="<?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"
@@ -52,11 +52,8 @@
                     
                 </div><!--features_items-->
                 
-                 
-            </div>
-            <div class="pagination_icons">
                 <!-- Постраничная навигация -->
-                <?php echo $pagination->get(); ?>
+                <?php echo $pagination->get(); ?> 
             </div>
            
         </div>
