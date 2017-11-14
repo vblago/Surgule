@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="../template/css/style.css">
     <link rel="stylesheet" href="../template/css/responsive.css">
 
-    <link rel="stylesheet" href="/project/css/owl.carousel.css">
-    <link rel="stylesheet" href="/project/style.css">
-    <link rel="stylesheet" href="/project/css/responsive.css">
+    <link rel="stylesheet" href="/template/css/owl.carousel.css">
+    <link rel="stylesheet" href="/template/css/style.css">
+    <link rel="stylesheet" href="/template/css/responsive.css">
   
   </head>
   <body>
