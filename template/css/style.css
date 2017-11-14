@@ -1003,3 +1003,13 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .pagination > li > a, .pagination > li > span {
   color: #4fc657;
 }
+
+.pagination_icons{
+  text-align: center;
+}
+
+#category_style{
+    border-radius: 5px; 
+    background-color: #4fc657;
+    color: white;  
+}
