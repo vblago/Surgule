@@ -2,7 +2,7 @@
 
 // Массив с параметрами подключения к базе данных
 return array(
-    'host' => 'localhost:8889',
+    'host' => 'localhost',
     'dbname' => 'phpshop',
     'user' => 'root',
     'password' => '1234',
