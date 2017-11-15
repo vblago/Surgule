@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="../template/css/owl.carousel.css">
     <link rel="stylesheet" href="../template/css/style.css">
     <link rel="stylesheet" href="../template/css/responsive.css">
+
+    <link rel="stylesheet" href="/template/css/owl.carousel.css">
+    <link rel="stylesheet" href="/template/css/style.css">
+    <link rel="stylesheet" href="/template/css/responsive.css">
    
   </head>
   <body>
@@ -63,7 +67,7 @@
         </div>
     </div> <!-- End header area -->
     
-    <div class="site-branding-area">
+    <div style="height: 110px" class="site-branding-area">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
