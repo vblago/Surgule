@@ -9,7 +9,7 @@
                     <div class="panel-group category-products">
                         <?php foreach ($categories as $categoryItem): ?>
                             <div class="panel panel-default">
-                                <div id="cat" class="panel-heading">
+                                <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a href="/category/<?php echo $categoryItem['id'];?>">
                                             <?php echo $categoryItem['name'];?>

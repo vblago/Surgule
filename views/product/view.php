@@ -1,6 +1,9 @@
-<?php include ROOT . '../views/layouts/header.php'; ?>
+<?php include ROOT . '/views/layouts/header.php'; ?>
 
+<<<<<<< HEAD
 <!--<<<<<<< HEAD-->
+=======
+>>>>>>> a2a47d5f57e45378bd4bf50c601aaf0af849f76a
 
     <div class="product-big-title-area">
             <div class="container">
@@ -9,6 +12,7 @@
                         <div class="product-bit-title text-center">
                             <h2>Shop</h2>
                         </div>
+<<<<<<< HEAD
 <!--=======-->
 <section>
     <div class="container" style="margin-top: 20px; margin-bottom: 20px">
@@ -29,6 +33,8 @@
                             </div>
                         <?php endforeach; ?>
 <!-->>>>>>> d383c968f8db705c573e14346764157bf3368f46-->
+=======
+>>>>>>> a2a47d5f57e45378bd4bf50c601aaf0af849f76a
                     </div>
                 </div>
             </div>
@@ -37,7 +43,10 @@
             <div class="zigzag-bottom"></div>
                 <div class="container">
                     <div class="row">
+<<<<<<< HEAD
 <!--<<<<<< HEAD-->
+=======
+>>>>>>> a2a47d5f57e45378bd4bf50c601aaf0af849f76a
                         <div class="col-sm-3">
                             <div class="left-sidebar">
                                 <h2>Каталог</h2>
@@ -53,11 +62,14 @@
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
+<<<<<<< HEAD
 <!--=======-->
                         <div class="col-sm-5">
                             <div class="view-product">
                                 <img  src="<?php echo Product::getImage($product['id']); ?>" alt="" />
 <!-->>>>>>> d383c968f8db705c573e14346764157bf3368f46-->
+=======
+>>>>>>> a2a47d5f57e45378bd4bf50c601aaf0af849f76a
                             </div>
                         </div>
                     </div>
@@ -118,7 +130,10 @@
                                             </div>
                                         </div>
 
+<<<<<<< HEAD
 <!--<<<<<< HEAD-->
+=======
+>>>>>>> a2a47d5f57e45378bd4bf50c601aaf0af849f76a
                                         <h2><a href="">Sony Smart TV - 2015</a></h2>
 
                                         <div class="product-carousel-price">
@@ -133,6 +148,7 @@
                                                 <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                             </div>
                                         </div>
+<<<<<<< HEAD
 <!--=======-->
                                 <?php if ($product['is_new']): ?>
                                     <img  src="/template/images/product-details/new.jpg" class="newarrival" alt="" />
@@ -164,6 +180,8 @@
                     </div>
                 </div><!--/product-details-->
 <!-->>>>>>> d383c968f8db705c573e14346764157bf3368f46-->
+=======
+>>>>>>> a2a47d5f57e45378bd4bf50c601aaf0af849f76a
 
                                         <h2><a href="">Apple new mac book 2015 March :P</a></h2>
                                         <div class="product-carousel-price">

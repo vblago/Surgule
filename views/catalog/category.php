@@ -1,14 +1,15 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
+
 <section>
-    <div style="margin-top: 20px"class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 <div class="left-sidebar">
-<!--                    <h1>by categories</h1>-->
+                    <h2>Каталог</h2>
                     <div class="panel-group category-products">
                         <?php foreach ($categories as $categoryItem): ?>
                             <div class="panel panel-default">
-                                <div id="category_style" class="panel-heading">
+                                <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a href="/category/<?php echo $categoryItem['id']; ?>"
                                            class="<?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>"
@@ -25,14 +26,14 @@
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
-                    
+                    <h2 class="title text-center">Последние товары</h2>
 
                     <?php foreach ($categoryProducts as $product): ?>
-                    <div class="col-sm-4">
+                        <div class="col-sm-4">
                             <div class="product-image-wrapper">
-                                <div style="height: 400px;"class="single-products">
+                                <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" alt="" />
+                                        <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
                                         <h2>$<?php echo $product['price']; ?></h2>
                                         <p>
                                             <a href="/product/<?php echo $product['id']; ?>">
@@ -44,23 +45,18 @@
                                     <?php if ($product['is_new']): ?>
                                         <img src="/template/images/home/new.png" class="new" alt="" />
                                     <?php endif; ?>
-                                        
                                 </div>
                             </div>
                         </div>
                     <?php endforeach; ?>                              
-                    
+
                 </div><!--features_items-->
                 
-                 
-            </div>
-            <div class="pagination_icons">
                 <!-- Постраничная навигация -->
                 <?php echo $pagination->get(); ?>
+
             </div>
-           
         </div>
-        
     </div>
 </section>
 

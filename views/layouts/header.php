@@ -18,22 +18,10 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
-<<<<<<< HEAD
     <link rel="stylesheet" href="../template/css/owl.carousel.css">
     <link rel="stylesheet" href="../template/css/style.css">
     <link rel="stylesheet" href="../template/css/responsive.css">
    
-=======
-
-    <link rel="stylesheet" href="../template/css/owl.carousel.css">
-    <link rel="stylesheet" href="../template/css/style.css">
-    <link rel="stylesheet" href="../template/css/responsive.css">
-
-    <link rel="stylesheet" href="/template/css/owl.carousel.css">
-    <link rel="stylesheet" href="/template/css/style.css">
-    <link rel="stylesheet" href="/template/css/responsive.css">
-  
->>>>>>> d383c968f8db705c573e14346764157bf3368f46
   </head>
   <body>
    
@@ -75,7 +63,7 @@
         </div>
     </div> <!-- End header area -->
     
-    <div style="height: 100px; align-items:  top"class="site-branding-area">
+    <div class="site-branding-area">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -86,7 +74,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="/cart/">Cart - <span class="cart-amunt"><?php echo $totalPrice;?></span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="/cart/">Cart - <span class="cart-amunt">$800</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
