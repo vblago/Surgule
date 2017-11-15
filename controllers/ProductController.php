@@ -13,7 +13,7 @@ class ProductController
      */
     public function actionView($productId)
     {
-        $latestProducts = Product::getLatestProducts(6);
+        $latestProducts = Product::getLatestProducts(12);
         // Список категорий для левого меню
         $categories = Category::getCategoriesList();
 
