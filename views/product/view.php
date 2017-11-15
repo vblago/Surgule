@@ -43,10 +43,6 @@
             <div class="zigzag-bottom"></div>
                 <div class="container">
                     <div class="row">
-<<<<<<< HEAD
-<!--<<<<<< HEAD-->
-=======
->>>>>>> a2a47d5f57e45378bd4bf50c601aaf0af849f76a
                         <div class="col-sm-3">
                             <div class="left-sidebar">
                                 <h2>Каталог</h2>
