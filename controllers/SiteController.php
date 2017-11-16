@@ -20,6 +20,9 @@ class SiteController
         // Список товаров для слайдера
         $sliderProducts = Product::getRecommendedProducts();
 
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+
         // Подключаем вид
         require_once(ROOT . '/views/site/index.php');
         return true;

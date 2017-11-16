@@ -53,7 +53,7 @@
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <button class="add_to_cart_button" type="submit">Add to cart</button>
+                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="add_to_cart_button" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                     </form>   
                                     
                                     <div class="product-inner-category">

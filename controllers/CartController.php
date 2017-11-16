@@ -69,6 +69,9 @@ class CartController
             $totalPrice = Cart::getTotalPrice($products);
         }
 
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+
         // Подключаем вид
         require_once(ROOT . '/views/cart/index.php');
         return true;

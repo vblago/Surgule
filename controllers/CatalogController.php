@@ -18,6 +18,9 @@ class CatalogController
         // Список последних товаров
         $latestProducts = Product::getLatestProducts(12);
 
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+
         // Подключаем вид
         require_once(ROOT . '/views/catalog/index.php');
         return true;
@@ -39,6 +42,9 @@ class CatalogController
 
         // Создаем объект Pagination - постраничная навигация
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT, 'page-');
+
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
 
         // Подключаем вид
         require_once(ROOT . '/views/catalog/category.php');

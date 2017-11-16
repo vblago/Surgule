@@ -18,6 +18,9 @@ class CabinetController
         // Получаем информацию о пользователе из БД
         $user = User::getUserById($userId);
 
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+
         // Подключаем вид
         require_once(ROOT . '/views/cabinet/index.php');
         return true;

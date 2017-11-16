@@ -10,6 +10,9 @@ class UserController
      */
     public function actionRegister()
     {
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+        
         // Переменные для формы
         $name = false;
         $email = false;
