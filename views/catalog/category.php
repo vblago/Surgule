@@ -2,25 +2,19 @@
 <section>
     <div style="margin-top: 20px"class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <div class="left-sidebar">
-<!--                    <h1>by categories</h1>-->
-                    <div class="panel-group category-products">
+            <div class="col-md-2">
                         <?php foreach ($categories as $categoryItem): ?>
                             <div class="panel panel-default">
-                                <div id="category_style" class="panel-heading">
+                                <div id = "category_style" class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a href="/category/<?php echo $categoryItem['id']; ?>"
-                                           class="<?php if ($categoryId == $categoryItem['id']) echo 'active'; ?>">                                                                                    
-                                               <?php echo $categoryItem['name']; ?>
+                                        <a href="/category/<?php echo $categoryItem['id']; ?>">
+                                            <?php echo $categoryItem['name']; ?>
                                         </a>
                                     </h4>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
-                    </div>
+                       <?php endforeach; ?> 
                 </div>
-            </div>
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->

@@ -1,6 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<div class="product-big-title-area">
+    <div class="product-big-title-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -13,14 +13,13 @@
     </div>
     
     
-
+<section>
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    
-                    <div class="panel-group category-products">
+
+                <div class="col-md-2">
                         <?php foreach ($categories as $categoryItem): ?>
                             <div class="panel panel-default">
                                 <div id = "category_style" class="panel-heading">
@@ -31,8 +30,7 @@
                                     </h4>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
-                    </div>
+                       <?php endforeach; ?> 
                 </div>
                 
                 <div class="col-md-8">
@@ -198,5 +196,5 @@
             </div>
         </div>
     </div>
-
+</section>
 <?php include ROOT . '/views/layouts/footer.php'; ?>
