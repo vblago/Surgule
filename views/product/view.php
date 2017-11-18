@@ -1,6 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<div class="product-big-title-area">
+    <div class="product-big-title-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -13,7 +13,7 @@
     </div>
     
     
-
+<section>
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -196,5 +196,5 @@
             </div>
         </div>
     </div>
-
+</section>
 <?php include ROOT . '/views/layouts/footer.php'; ?>

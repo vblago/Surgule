@@ -1,6 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<section>
+<section class="siteAlign">
     <div class="container" style="margin-top: 20px">
         <div class="row">
 
