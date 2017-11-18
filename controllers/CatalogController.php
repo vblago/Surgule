@@ -17,7 +17,15 @@ class CatalogController
 
         // Список последних товаров
         $latestProducts = Product::getLatestProducts(12);
-
+        $cat11= Product::getProductsListByCategory(11,1);
+        $cat13= Product::getProductsListByCategory(13,1);
+        $cat14= Product::getProductsListByCategory(14,1);
+        $cat15= Product::getProductsListByCategory(15,1);
+        $cat16= Product::getProductsListByCategory(16,1);
+        $cat17= Product::getProductsListByCategory(17,1);
+        
+        
+        
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
 
@@ -25,6 +33,19 @@ class CatalogController
         require_once(ROOT . '/views/catalog/index.php');
         return true;
     }
+    
+//    public function top(){
+//        $categories = Category::getCategoriesList();
+//        $latestProducts = Product::getLatestProducts(12);
+//        
+//        $topy=Product::getProductsListByCategory(13,1);
+//        
+//        $totalPrice = CartHeader::getPrice();
+//        $totalCount = CartHeader::getTotal();
+//        
+//        require_once(ROOT . '/views/catalog/index.php');
+//        return true;
+//    } 
 
     /**
      * Action для страницы "Категория товаров"
@@ -47,8 +68,8 @@ class CatalogController
         $totalCount = CartHeader::getTotal();
 
         // Подключаем вид
-        require_once(ROOT . '/views/catalog/category.php');
+        require_once(ROOT . '/views/catalog/category.php');        
         return true;
     }
-
+    
 }

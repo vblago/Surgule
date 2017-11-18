@@ -1015,3 +1015,10 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
     background-color: #4fc657;
     color: white;  
 }
+.cattop{
+    width: 100%;
+   
+    text-align: center;
+    
+    align-content: center;
+}
