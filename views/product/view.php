@@ -21,7 +21,7 @@
 
                 <div class="col-md-2">
                         <?php foreach ($categories as $categoryItem): ?>
-                            <div class="panel panel-default">
+                            
                                 <div id = "category_style" class="panel-heading">
                                     <h4 class="panel-title">
                                         <a href="/category/<?php echo $categoryItem['id']; ?>">
@@ -29,7 +29,7 @@
                                         </a>
                                     </h4>
                                 </div>
-                            </div>
+                            
                        <?php endforeach; ?> 
                 </div>
                 
