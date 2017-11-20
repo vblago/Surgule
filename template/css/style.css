@@ -936,7 +936,6 @@ a.about_paypal {
     margin-left: 15px;
 }
 
-
 #customer_details select, .shipping_calculator select {
   border: 1px solid #ddd;
   margin-bottom: 15px;
@@ -996,6 +995,9 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 }
 .pagination_icons{
   text-align: center;
+}
+#categoty_style:hover{
+background: #FFCC30;
 }
 #category_style{
 text-align: center;

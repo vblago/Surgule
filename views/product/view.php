@@ -29,7 +29,7 @@
                                         </a>
                                     </h4>
                                 </div>
-                            
+                                
                        <?php endforeach; ?> 
                 </div>
                 
