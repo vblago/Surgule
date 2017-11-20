@@ -24,6 +24,7 @@ class CartHeader
 	static function getTotal(){
 		// Получим идентификаторы и количество товаров в корзине
         $productsInCart = Cart::getProducts();
+        $counter = 0;
 
         if ($productsInCart) {
             // Если в корзине есть товары, получаем полную информацию о товарах для списка

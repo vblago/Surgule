@@ -126,95 +126,26 @@
                     <div class="latest-product">
                         <h2 class="section-title">Latest Products</h2>
                         <div class="product-carousel">
+
+                        <?php foreach ($latestProducts as $product): ?>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="upload/images/product-1.jpg" alt="">
+                                    <img src="<?php echo Product::getImage($product['id']); ?>" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div>
                                 
-                                <h2><a href="single_product.php">Sony Smart TV - 2015</a></h2>
+                                <h2>
+                                    <a href="/product/<?php echo $product['id'];?>"><?php echo $product['name'];?></a>
+                                </h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins>$700.00</ins> <del>$800.00</del>
+                                    <ins>$<?php echo $product['price'];?></ins> <del>$<?php echo $product['price']*1.2;?></del>
                                 </div> 
                             </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="upload/images/product-2.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single_product.php">Apple new mac book 2015 March :P</a></h2>
-                                <div class="product-carousel-price">
-                                    <ins>$899.00</ins> <del>$999.00</del>
-                                </div> 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="upload/images/product-3.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single_product.php">Apple new i phone 6</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins> <del>$425.00</del>
-                                </div>                                 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="upload/images/product-4.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single_product.php">Sony playstation microsoft</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$200.00</ins> <del>$225.00</del>
-                                </div>                            
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="upload/images/product-5.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single_product.php">Sony Smart Air Condtion</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$1200.00</ins> <del>$1355.00</del>
-                                </div>                                 
-                            </div>
-                            <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="upload/images/product-6.jpg" alt="">
-                                    <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                    </div>
-                                </div>
-                                
-                                <h2><a href="single_product.php">Samsung gallaxy note 4</a></h2>
-
-                                <div class="product-carousel-price">
-                                    <ins>$400.00</ins>
-                                </div>                            
-                            </div>
+                        <?php endforeach;?>
                         </div>
                     </div>
                 </div>
@@ -249,150 +180,34 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
+
+            <?php $counter = 0; 
+                foreach ($categories as $categoryItem): 
+                $counter++; 
+                if($counter == 2)break;
+                $categoryProducts = Product::getProductsListByCategory($categoryItem['id'], 1);
+            ?>     
                 <div class="col-md-4">
                     <div class="single-product-widget">
-                        <h2 class="product-wid-title">Top Sellers</h2>
-                        <a href="" class="wid-view-more">View All</a>
+                        <h2 class="product-wid-title"><?php echo $categoryItem['name']; ?></h2>
+                        <a href="/category/<?php echo $categoryItem['id']; ?>" class="wid-view-more">View All</a>
+                        
+                        <?php $counter = 0; foreach ($categoryProducts as $product): $counter++; if($counter == 4)break; ?>
                         <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Sony Smart TV - 2015</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
+                            <img height="100px" width="100px" class="product-thumb" src="<?php echo Product::getImage($product['id']); ?>" alt="">
+                            <h2><a href="/product/<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></h2>
                             <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                                <ins>$<?php echo $product['price']; ?></ins> <del>$<?php echo $product['price']*1.2; ?></del>
                             </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Apple new mac book 2015</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Apple new i phone 6</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
+                        </div> 
+
+
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="single-product-widget">
-                        <h2 class="product-wid-title">Recently Viewed</h2>
-                        <a href="#" class="wid-view-more">View All</a>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Sony playstation microsoft</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Sony Smart Air Condtion</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-2.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Samsung gallaxy note 4</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-product-widget">
-                        <h2 class="product-wid-title">Top New</h2>
-                        <a href="#" class="wid-view-more">View All</a>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Apple new i phone 6</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Samsung gallaxy note 4</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single_product.php"><img src="upload/images/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single_product.php">Sony playstation microsoft</a></h2>
-                            <div class="product-wid-rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
+            <?php endforeach; ?>
+
             </div>
         </div>
     </div> <!-- End product widget area -->

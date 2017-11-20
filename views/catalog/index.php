@@ -1,22 +1,29 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
+<<<<<<< HEAD
 <section>
     <div  class="container" style="margin-top: 20px; width: 100%; padding-left: 100px">
+=======
+<section class="siteAlign">
+    <div class="container" style="margin-top: 20px">
+>>>>>>> 2ff2cd8c096f866c23193d590385cdaac7199a87
         <div class="row">
 
            
 
                 <div class="col-md-2">
                         <?php foreach ($categories as $categoryItem): ?>
-                            <div class="panel panel-default">
+                            
                                 <div id = "category_style" class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="/category/<?php echo $categoryItem['id']; ?>">
-                                            <?php echo $categoryItem['name']; ?>
-                                        </a>
-                                    </h4>
+                                    
+                                        <h4 class="panel-title">
+                                            <a href="/category/<?php echo $categoryItem['id']; ?>">
+                                                <?php echo $categoryItem['name']; ?>
+                                            </a>
+                                        </h4>
+                                    
                                 </div>
-                            </div>
+                            
                        <?php endforeach; ?> 
                 </div>
 
@@ -38,14 +45,9 @@
                                             </a>
                                         </p>
                                         
-                                        <a href="#" data-id="<?php echo $product['id'];?>"
-                                           class="btn btn-default add-to-cart">
-                                            <i class="fa fa-shopping-cart"></i>В корзину
-                                        </a>
+                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                        
                                     </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

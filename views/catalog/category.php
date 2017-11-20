@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-2">
                         <?php foreach ($categories as $categoryItem): ?>
-                            <div class="panel panel-default">
+                            
                                 <div id = "category_style" class="panel-heading">
                                     <h4 class="panel-title">
                                         <a href="/category/<?php echo $categoryItem['id']; ?>">
@@ -12,10 +12,9 @@
                                         </a>
                                     </h4>
                                 </div>
-                            </div>
+                            
                        <?php endforeach; ?> 
                 </div>
-
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
@@ -35,10 +34,6 @@
                                         </p>
                                         <a href="/cart/add/<?php echo $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                     </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
-                                        
                                 </div>
                             </div>
                         </div>
@@ -48,13 +43,12 @@
                 
                  
             </div>
-            <div class="pagination_icons">
+           
+        </div>
+        <div class="pagination_icons">
                 <!-- Постраничная навигация -->
                 <?php echo $pagination->get(); ?>
             </div>
-           
-        </div>
-        
     </div>
 </section>
 
