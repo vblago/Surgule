@@ -3,7 +3,23 @@
 <section>
     <div  class="container" style="margin-top: 20px; width: 100%; padding-left: 100px">
         <div class="row">
-            
+
+           
+
+                <div class="col-md-2">
+                        <?php foreach ($categories as $categoryItem): ?>
+                            <div class="panel panel-default">
+                                <div id = "category_style" class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a href="/category/<?php echo $categoryItem['id']; ?>">
+                                            <?php echo $categoryItem['name']; ?>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                       <?php endforeach; ?> 
+                </div>
+
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
