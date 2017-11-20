@@ -12,7 +12,7 @@ class SiteController
     public function actionIndex()
     {
         // Список категорий для левого меню
-        $categories = Category::getCategoriesList();
+        $categories = Category::getCategoriesList();    
 
         // Список последних товаров
         $latestProducts = Product::getLatestProducts(6);
