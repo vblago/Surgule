@@ -1,12 +1,7 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<<<<<<< HEAD
-<section>
-    <div  class="container" style="margin-top: 20px; width: 100%; padding-left: 100px">
-=======
 <section class="siteAlign">
     <div class="container" style="margin-top: 20px">
->>>>>>> 2ff2cd8c096f866c23193d590385cdaac7199a87
         <div class="row">
 
            

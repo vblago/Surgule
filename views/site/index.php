@@ -129,8 +129,8 @@
 
                         <?php foreach ($latestProducts as $product): ?>
                             <div class="single-product">
-                                <div class="product-f-image">
-                                    <img src="<?php echo Product::getImage($product['id']); ?>" alt="">
+                                <div style="height: 250px" class="product-f-image">
+                                    <img style="vertical-align: middle;" src="<?php echo Product::getImage($product['id']); ?>" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -181,10 +181,10 @@
         <div class="container">
             <div class="row">
 
-            <?php $counter = 0; 
+            <?php $count = 0; 
                 foreach ($categories as $categoryItem): 
-                $counter++; 
-                if($counter == 2)break;
+                $count++; 
+                if($count == 4)break;
                 $categoryProducts = Product::getProductsListByCategory($categoryItem['id'], 1);
             ?>     
                 <div class="col-md-4">
