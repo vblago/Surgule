@@ -1044,4 +1044,17 @@ margin-top: 1px;
   width:185px;
   opacity:0.7;
 }
->>>>>>> 2ff2cd8c096f866c23193d590385cdaac7199a87
+
+.Vendetta{
+  align: left; 
+  width: 100%;
+  margin-left: 30px;
+}
+.vcateg{
+  display: inline; 
+  width: 100%; 
+  padding-left: 60px; 
+  padding-right: 60px;
+
+  margin-bottom: 40px;
+}
