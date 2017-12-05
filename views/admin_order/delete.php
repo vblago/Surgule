@@ -6,24 +6,24 @@
 
             <br/>
 
-            <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление заказами</a></li>
-                    <li class="active">Удалить заказ</li>
-                </ol>
-            </div>
 
+        <table width="550px">
+                <tr>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Админпанель</a></td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/order">Управление заказами</a></td>
+                    <td style="font-size: 25px">Удалить заказ</td>
+                </tr>
+            </table>  
+        </div>
+            <h2>Удалить заказ #<?php echo $id; ?></h2>
 
-            <h4>Удалить заказ #<?php echo $id; ?></h4>
-
-
-            <p>Вы действительно хотите удалить этот заказ?</p>
+        <div style="padding-left: 20px; font-size: 20px">
+            <p style="font-size: 20px">Вы действительно хотите удалить этот заказ?</p>
 
             <form method="post">
-                <input type="submit" name="submit" value="Удалить" />
+                <input type="submit" name="submit" value="Удалить" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 100px; border-style: none;">
             </form>
-
+        </div>
         </div>
     </div>
 </section>

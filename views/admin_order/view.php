@@ -1,28 +1,34 @@
 <?php include ROOT . '/views/layouts/header_admin.php'; ?>
-
-<section>
+<style type="text/css">
+    tr, td{
+        padding: 10px;
+        padding-left: 10px;   
+    }
+</style>
+<section style="padding-left: 30px">
     <div class="container">
         <div class="row">
 
             <br/>
 
-            <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление заказами</a></li>
-                    <li class="active">Просмотр заказа</li>
-                </ol>
-            </div>
+            <table width="620px">
+                <tr>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Админпанель</a></td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/order">Управление заказами</a></td>
+                    <td style="font-size: 25px">Просмотр заказа</td>
+                </tr>
+            </table>  
+        </div>
 
-
-            <h4>Просмотр заказа #<?php echo $order['id']; ?></h4>
+            <h2>Просмотр заказа #<?php echo $order['id']; ?></h2>
             <br/>
 
 
 
 
-            <h5>Информация о заказе</h5>
-            <table class="table-admin-small table-bordered table-striped table">
+            <p style="font-size: 20px">Информация о заказе</p>
+
+            <table style="font-family: sans-serif; font-style: oblique; color: #1D1BBF; font-size: 20px " width="50%">
                 <tr>
                     <td>Номер заказа</td>
                     <td><?php echo $order['id']; ?></td>
@@ -55,10 +61,10 @@
                 </tr>
             </table>
 
-            <h5>Товары в заказе</h5>
+            <p style="font-size: 20px">Товары в заказе</p>
 
-            <table class="table-admin-medium table-bordered table-striped table ">
-                <tr>
+            <table style="font-family: sans-serif; font-style: oblique; color: #1D1BBF; font-size: 20px " width="50%">
+                <tr style="font-family: sans-serif; font-style: oblique; color: black ">
                     <th>ID товара</th>
                     <th>Артикул товара</th>
                     <th>Название</th>
@@ -76,7 +82,6 @@
                 <?php endforeach; ?>
             </table>
 
-            <a href="/admin/order/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
         </div>
 
 
