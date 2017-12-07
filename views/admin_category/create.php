@@ -6,16 +6,16 @@
 
             <br/>
 
-            <div class="breadcrumbs">
-                <ol class="breadcrumb">
-                    <li><a href="/admin">Админпанель</a></li>
-                    <li><a href="/admin/order">Управление категориями</a></li>
-                    <li class="active">Добавить категорию</li>
-                </ol>
-            </div>
-
-
-            <h4>Добавить новую категорию</h4>
+        <div>
+            <table width="780px">
+                <tr>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Админпанель</a></td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/order">Управление категориями</a></td>
+                    <td style="font-size: 30px">Редактировать категорию</td>
+                </tr>
+            </table>  
+        </div>
+            <h2>Добавить новую категорию</h2>
 
             <br/>
 
@@ -32,20 +32,20 @@
                     <form action="#" method="post">
 
                         <p>Название</p>
-                        <input type="text" name="name" placeholder="" value="">
+                        <input type="text" name="name" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
                         <p>Порядковый номер</p>
-                        <input type="text" name="sort_order" placeholder="" value="">
+                        <input type="text" name="sort_order" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
                         <p>Статус</p>
-                        <select name="status">
+                        <select name="status" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 130px; border-style: none;">
                             <option value="1" selected="selected">Отображается</option>
                             <option value="0">Скрыта</option>
                         </select>
 
                         <br><br>
 
-                        <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
+                        <input type="submit" name="submit" class="btn btn-default" value="Сохранить" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 100px; border-style: none;">
                     </form>
                 </div>
             </div>

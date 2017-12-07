@@ -1,5 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
+<<<<<<< HEAD
 
 <section>
     <div  class="container" style="margin-top: 20px; width: 100%; padding-left: 100px">
@@ -20,249 +21,56 @@
                             </a>    
                        <?php endforeach; ?> 
                 </div>
+=======
 
 
-            <div class="col-sm-9 padding-right">
-                <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Последние товары</h2>
-                    
-                    <?php foreach ($latestProducts as $product): ?>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                                <div class="single-products" style="height: 400px;">
-                                    <div class="productinfo text-center" >
-                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" >
-                                        <h2>$<?php echo $product['price'];?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id'];?>">
-                                                <?php echo $product['name'];?>
-                                            </a>
-                                        </p>
-                                        
-                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach;?>                   
 
-                </div><!--features_items-->
+ <div style="overflow: hidden;" >
+    <?php $count = 0; 
+        foreach ($categories as $categoryItem): 
+        $count++; 
+        $categoryProducts = Product::getProductsListByCategory($categoryItem['id'], 1);
+    ?> 
+                                
+    <h2 class="title text-center"><?php echo $categoryItem['name']; ?></h2>
+    <div class="col-sm-12 sm-bordered" style="padding-top:40px;  ">               
+        <div class="row" style=" border-style: solid; margin: 10px; ">
+                <?php $counter = 0; foreach ($categoryProducts as $product): $counter++; if($counter == 4)break; ?>
+                                
                 
-                
-                
-                <div class="cattop"><h1>Топ телефоны</h1>
-                    <?php foreach ($cat11 as $product): ?>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                                <div class="single-products" style="height: 400px;">
-                                    <div class="productinfo text-center" >
-                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" >
-                                        <h2>$<?php echo $product['price'];?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id'];?>">
-                                                <?php echo $product['name'];?>
-                                            </a>
-                                        </p>
-                                        
-                                        <a href="#" data-id="<?php echo $product['id'];?>"
-                                           class="btn btn-default add-to-cart">
-                                            <i class="fa fa-shopping-cart"></i>В корзину
-                                        </a>
-                                    </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
-                                </div>
-                            </div>
+                    <div class="col-md-3" style="border-right-style: solid; margin: 10px; padding: 10px; ">
+                        
+                        <div>
+                            
+                            <img style="height: 300px; width: 320px; " src="<?php echo Product::getImage($product['id']); ?>" >
+                        
+                            <h2>$<?php echo $product['price'];?></h2>
+                            
+                            <p>
+                                <a href="/product/<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a>
+                            </p>
+                                                    
+                            <a href="/cart/add/<?php echo $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину
+                            </a>
+                            
                         </div>
-                    <?php endforeach;?>
                     
-                    <a href="/category/11">
-                        <img src="/template/images/home/arrow1.png" style="height:30px; weight:30px">
-                    </a>
-                    
-                </div>
-                
-                
-                
-                <div class="cattop"><h1>Топ ноутбуки</h1>
-                    <?php foreach ($cat13 as $product): ?>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                                <div class="single-products" style="height: 400px;">
-                                    <div class="productinfo text-center" >
-                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" >
-                                        <h2>$<?php echo $product['price'];?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id'];?>">
-                                                <?php echo $product['name'];?>
-                                            </a>
-                                        </p>
-                                        
-                                        <a href="#" data-id="<?php echo $product['id'];?>"
-                                           class="btn btn-default add-to-cart">
-                                            <i class="fa fa-shopping-cart"></i>В корзину
-                                        </a>
-                                    </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach;?>
-                    
-                    <a href="/category/13" style="align-items: top">
-                        <img src="/template/images/home/arrow1.png" style="height:30px; weight:30px">
-                    </a>
-                </div>
-                
-                
-                
-                <div class="cattop"><h1>Топ планшеты</h1>
-                    <?php foreach ($cat14 as $product): ?>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                                <div class="single-products" style="height: 400px;">
-                                    <div class="productinfo text-center" >
-                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" >
-                                        <h2>$<?php echo $product['price'];?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id'];?>">
-                                                <?php echo $product['name'];?>
-                                            </a>
-                                        </p>
-                                        
-                                        <a href="#" data-id="<?php echo $product['id'];?>"
-                                           class="btn btn-default add-to-cart">
-                                            <i class="fa fa-shopping-cart"></i>В корзину
-                                        </a>
-                                    </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach;?>
-                    
-                    <a href="/category/14">
-                        <img src="/template/images/home/arrow1.png" style="height:30px; weight:30px">
-                    </a>
-                    
-                </div>
-                
-                
-                
-                <div class="cattop"><h1>Топ мониторы</h1>
-                    <?php foreach ($cat15 as $product): ?>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                                <div class="single-products" style="height: 400px;">
-                                    <div class="productinfo text-center" >
-                                        <img style="height: 200px; align-content: left" src="<?php echo Product::getImage($product['id']); ?>" >
-                                        <h2>$<?php echo $product['price'];?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id'];?>">
-                                                <?php echo $product['name'];?>
-                                            </a>
-                                        </p>
-                                        
-                                        <a href="#" data-id="<?php echo $product['id'];?>"
-                                           class="btn btn-default add-to-cart">
-                                            <i class="fa fa-shopping-cart"></i>В корзину
-                                        </a>
-                                    </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach;?>
-                    
-                    <a href="/category/15">
-                        <img src="/template/images/home/arrow1.png" style="height:30px; weight:30px">
-                    </a>
-                    
-                </div>
-                
-                
-                
-                <div><h1>Топ компьютеры</h1>
-                    <?php foreach ($cat16 as $product): ?>
-                    <div class="col-sm-4">
-                        <div  class="product-image-wrapper">
-                                <div  class="single-products" style="height: 400px;">
-                                    <div  class="productinfo text-center" >
-                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" >
-                                        <h2>$<?php echo $product['price'];?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id'];?>">
-                                                <?php echo $product['name'];?>
-                                            </a>
-                                        </p>
-                                        
-                                        <a href="#" data-id="<?php echo $product['id'];?>"
-                                           class="btn btn-default add-to-cart">
-                                            <i class="fa fa-shopping-cart"></i>В корзину
-                                        </a>
-                                    </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach;?>
-                    
-                    <a href="/category/16">
-                        <img src="/template/images/home/arrow1.png" style="height:30px; weight:30px">
-                    </a>
-                    
-                </div>
-                
-                
-                
-                <div class="cattop"><p><h1>Топ телевизоры</h1></p>
-                    <?php foreach ($cat17 as $product): ?>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                                <div class="single-products" style="height: 400px;">
-                                    <div class="productinfo text-center" >
-                                        <img style="height: 200px" src="<?php echo Product::getImage($product['id']); ?>" >
-                                        <h2>$<?php echo $product['price'];?></h2>
-                                        <p>
-                                            <a href="/product/<?php echo $product['id'];?>">
-                                                <?php echo $product['name'];?>
-                                            </a>
-                                        </p>
-                                        
-                                        <a href="#" data-id="<?php echo $product['id'];?>"
-                                           class="btn btn-default add-to-cart">
-                                            <i class="fa fa-shopping-cart"></i>В корзину
-                                        </a>
-                                    </div>
-                                    <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach;?>
-                
-                    <a href="/category/17">
-                        <img src="/template/images/home/arrow1.png" style="height:30px; weight:30px">
-                    </a>
-                
-                </div>
-                
-                
+                    </div>
+>>>>>>> 798b5135ae449b3808d4285c823535a5b6b092d9
 
-            </div>
-        </div>
-    </div>
-</section>
+
+
+                <?php endforeach; ?>
+              <a  href="/category/<?php echo $categoryItem['id']; ?>"><img style="padding-top: 200px; margin-left: 100px" src="/template/images/home/arrow12.png" height="50px" width="50px">
+              </a>
+
+            
+        </div>       
+    </div>                         
+    <?php endforeach;?>                   
+
+</div>
+
+
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>
