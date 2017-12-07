@@ -1019,29 +1019,30 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
   height:15px;
   width:155px;
 }
-.panel-title{
-    font-size:11px;
-}
 .col-md-2{
   opacity: 0.7;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
-
-=======
-#categoty_style:hover{
+#category_style:hover{
 background: #FFCC30;
+text-align:center;
+border-radius:20px;
+color:white;
+margin-top:1px;
 }
 #category_style{
 text-align: center;
 border-radius: 20px; 
-background-color: #4fc657;
+background: #4fc657;
 color: white;  
 margin-top: 1px;
 }
 .panel-title{
- font-size:11px;
+font-size:11px;
 }
 .col-md-2{
   width:185px;
-  opacity:0.7;
+  opacity: 0.7;
 }
->>>>>>> 2ff2cd8c096f866c23193d590385cdaac7199a87
+

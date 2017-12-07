@@ -21,15 +21,17 @@
 
                 <div class="col-md-2">
                         <?php foreach ($categories as $categoryItem): ?>
-                            
+                            <a class="textHover" href="/category/<?php echo $categoryItem['id']; ?>">
                                 <div id = "category_style" class="panel-heading">
+                                    
                                     <h4 class="panel-title">
-                                        <a href="/category/<?php echo $categoryItem['id']; ?>">
-                                            <?php echo $categoryItem['name']; ?>
-                                        </a>
+                                        
+                                            <?php echo $categoryItem['name']; ?> 
+                                        
                                     </h4>
+
                                 </div>
-                                
+                            </a>    
                        <?php endforeach; ?> 
                 </div>
                 
