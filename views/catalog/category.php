@@ -2,17 +2,19 @@
 <section>
     <div style="margin-top: 20px"class="container">
         <div class="row">
-            <div class="col-md-2">
+          <div class="col-md-2">
                         <?php foreach ($categories as $categoryItem): ?>
-                            
+                            <a href="/category/<?php echo $categoryItem['id']; ?>">
                                 <div id = "category_style" class="panel-heading">
+                                    
                                     <h4 class="panel-title">
-                                        <a href="/category/<?php echo $categoryItem['id']; ?>">
+                                        
                                             <?php echo $categoryItem['name']; ?>
-                                        </a>
+                                        
                                     </h4>
+
                                 </div>
-                            
+                            </a>    
                        <?php endforeach; ?> 
                 </div>
 
