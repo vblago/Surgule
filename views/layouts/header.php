@@ -87,23 +87,14 @@
     
     <div class="mainmenu-area">
         <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div> 
+            <div class="row"> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/">Домашня</a></li>
                         <li><a href="/catalog/">Магазин</a></li>
                         <li><a href="/contacts/">Контакти</a></li>
                         <li><a href="user/register">Single product</a></li>
-                        <li> <a href="/product/<?php echo 45;?>">
-                                                </a></li>
+                        <li> <a href="/product/<?php echo 45;?>"></a></li>
                     </ul>
                 </div>  
             </div>

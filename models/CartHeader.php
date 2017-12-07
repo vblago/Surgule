@@ -1,5 +1,4 @@
 <?php 
-
 class CartHeader
 {
 	static function getPrice(){
@@ -20,7 +19,7 @@ class CartHeader
         }
         return $totalPrice;
 	}
-
+    
 	static function getTotal(){
 		// Получим идентификаторы и количество товаров в корзине
         $productsInCart = Cart::getProducts();
