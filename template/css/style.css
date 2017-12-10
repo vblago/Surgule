@@ -10,7 +10,7 @@
 }
 .aligncenter {
     display: block;
-    margin: 0 auto 15px;
+    margin: 0 auto 0px;
 }
 a:focus { outline: 0px solid }
 img {
@@ -25,14 +25,15 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    margin: 0 0 15px;
+    margin: 0 0 0px;
 }
 body { font-family: 'Titillium Web', sans-serif; }
 
 
-
 .header-area {
-    background: none repeat scroll 0 0 #f4f4f4;
+    background: none repeat scroll 2em 0 #f4f4f4;
+    padding: 0px;
+    margin:  0px;
 }
 .header-area a {
     color: #888;
@@ -148,6 +149,7 @@ z-index: 999;}
     font-weight: 700;
     padding: 20px;
 }
+
 
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #404040}
 .mainmenu-area .nav > li > a:focus {color: #000}
