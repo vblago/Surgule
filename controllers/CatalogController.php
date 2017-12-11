@@ -29,6 +29,8 @@ class CatalogController
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
 
+        $aboutPage = "catalog";
+
         // Подключаем вид
         require_once(ROOT . '/views/catalog/index.php');
         return true;

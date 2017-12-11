@@ -23,6 +23,8 @@ class SiteController
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
 
+        $aboutPage = "main";
+
         // Подключаем вид
         require_once(ROOT . '/views/site/index.php');
         return true;
@@ -65,6 +67,8 @@ class SiteController
             }
         }
 
+        $aboutPage = "contact";
+
         // Подключаем вид
         require_once(ROOT . '/views/site/contact.php');
         return true;
@@ -75,6 +79,8 @@ class SiteController
      */
     public function actionAbout()
     {
+        $aboutPage = "about";
+
         // Подключаем вид
         require_once(ROOT . '/views/site/about.php');
         return true;

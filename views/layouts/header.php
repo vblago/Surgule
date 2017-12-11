@@ -93,24 +93,13 @@
             <div class="row"> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="<?php if (getUrl() == "http://localhost/") echo active?>"><a href="/">Домашня</a></li>
-                        <li class="<?php if (getUrl() == "http://localhost/catalog/") echo active?>"><a href="/catalog/">Магазин</a></li>
-                        <li class="<?php if (getUrl() == "http://localhost/contacts/") echo active?>"><a href="/contacts/">Контакти</a></li>
-                        <li><a href="user/register">Single product</a></li>
-                        <li><a href="/product/<?php echo 45;?>"></a></li>
+                        <li class="<?php if ($aboutPage == "main") echo active?>"><a href="/">Домашня</a></li>
+                        <li class="<?php if ($aboutPage == "catalog") echo active?>"><a href="/catalog/">Магазин</a></li>
+                        <li class="<?php if ($aboutPage == "contact") echo active?>"><a href="/contacts/">Зворотній зв'язок</a></li>
+                        <li class="<?php if ($aboutPage == "register") echo active?>"><a href="user/register">Реєстрация</a></li>
+                        <li class="<?php if ($aboutPage == "about") echo active?>"><a href="/about/">Про нас</a></li>
                     </ul>
                 </div>  
             </div>
         </div>
     </div> <!-- End mainmenu area -->
-<?php
-    function getUrl() {
-      $url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
-      $url .= ( $_SERVER["SERVER_PORT"] != 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
-      $url .= $_SERVER["REQUEST_URI"];
-      
-      $st=strval($url);
-      return $st;
-    }
-    
-?>

@@ -51,6 +51,8 @@ class UserController
             }
         }
 
+        $aboutPage = "register";
+
         // Подключаем вид
         require_once(ROOT . '/views/user/register.php');
         return true;
