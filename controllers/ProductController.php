@@ -28,4 +28,20 @@ class ProductController
         return true;
     }
 
+    public function actionSession($product)
+    {
+        session_start();    
+        if(count($_SESSION)>10)
+        {
+            $array_shift($_SESSION);
+        }
+        $array_push($_SESSION, "$productId");
+    }
+
+    public function viewSession()
+    {
+        session_start();
+        actionSession($product);
+    }
+
 }
