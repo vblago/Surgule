@@ -15,6 +15,9 @@ class User
      */
     public static function register($name, $email, $password)
     {
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+        
         // Соединение с БД
         $db = Db::getConnection();
 

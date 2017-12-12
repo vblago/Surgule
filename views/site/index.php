@@ -1,6 +1,6 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<div class="slider-area">
+    <div class="slider-area">
         <div class="zigzag-bottom"></div>
         <div id="slide-list" class="carousel carousel-fade slide" data-ride="carousel">
             
@@ -82,7 +82,6 @@
                     </div>
                 </div>
             </div>
-
         </div>        
     </div> <!-- End slider area -->
     
@@ -213,5 +212,4 @@
             </div>
         </div>
     </div> <!-- End product widget area -->
-
 <?php include ROOT . '/views/layouts/footer.php'; ?>

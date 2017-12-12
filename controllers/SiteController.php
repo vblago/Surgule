@@ -35,6 +35,8 @@ class SiteController
      */
     public function actionContact()
     {
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
 
         // Переменные для формы
         $userEmail = false;
@@ -79,6 +81,9 @@ class SiteController
      */
     public function actionAbout()
     {
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+
         $aboutPage = "about";
 
         // Подключаем вид
