@@ -104,25 +104,29 @@
                         <div class="related-products-wrapper">
                             <h2 class="related-products-title">Related Products</h2>
                             <div class="related-products-carousel">
-                                <div class="single-product">
+                                <?php foreach($_SESSION['prodId'] as $key => $value) { ?>
+                                <div class="single-product">    
+
                                     <div class="product-f-image">
-                                       <?php foreach ($product as $productId): viewSession($product); 
-                                       ?>
-                                        <img src="img/<?php echo Product::getImage($_SESSION[$productuctId]); ?>" alt="">
+                                    <?php $product = Product::getProductById($value) ?>
+                                        <img src="<?php echo Product::getImage($product['id']); ?>" alt="">  
                                         <div class="product-hover">
-                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <?php $product = Product::getProductById($value) ?>
+                                            <a href="/cart/add/<?php echo $product['id']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <?php $product = Product::getProductById($value) ?>
+                                            <a href="/product/<?php echo $product['id']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="">Sony Smart TV - 2015</a></h2>
+                                    <h2><a href="/product/<?php echo $product['id']; ?>"><?php $product = Product::getProductById($value); echo $product['name']; echo $value ?></a></h2>
 
                                     <div class="product-carousel-price">
-                                        <ins>$700.00</ins> <del>$800.00</del>
+                                        <ins>$<?php $product = Product::getProductById($value); echo $product['price']; ?></ins> <del>$<?php $product = Product::getProductById($value); echo $product['price']*1.2; ?></del>
                                         
                                     </div> 
-                                <?php endforeach; ?>
-                                </div>                               
+                                   
+                                </div>    
+                                <?php } ?>                            
                             </div>
                         </div>
                     </div>                    
