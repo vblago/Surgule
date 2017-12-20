@@ -19,8 +19,11 @@
                     <form action="#" method="post">
                         <input type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>"/>
                         <input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/>
-                        <input type="submit" name="submit" class="btn btn-default" value="Вход" />
+                        <input type="submit" name="submit" style="margin-top: 20px;" class="btn btn-default" value="Вход" />
                     </form>
+                    <div>
+                        <a href="/user/recovery/">Забыли пароль?</a>
+                    </div>
                 </div><!--/sign up form-->
 
 

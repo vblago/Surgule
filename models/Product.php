@@ -21,7 +21,7 @@ class Product
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'SELECT id, name, price, is_new FROM product '
+        $sql = 'SELECT id, name, price, rate, rate_count, is_new FROM product '
                 . 'WHERE status = "1" ORDER BY id DESC '
                 . 'LIMIT :count';
 
@@ -42,6 +42,8 @@ class Product
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
             $productsList[$i]['price'] = $row['price'];
+            $productsList[$i]['rate'] = $row['rate'];
+            $productsList[$i]['rate_count'] = $row['rate_count'];
             $productsList[$i]['is_new'] = $row['is_new'];
             $i++;
         }
@@ -64,7 +66,7 @@ class Product
         $db = Db::getConnection();
 
         // Текст запроса к БД
-        $sql = 'SELECT id, name, price, is_new FROM product '
+        $sql = 'SELECT id, name, price, rate, rate_count, is_new FROM product '
                 . 'WHERE status = 1 AND category_id = :category_id '
                 . 'ORDER BY id ASC LIMIT :limit OFFSET :offset';
 
@@ -84,6 +86,8 @@ class Product
             $products[$i]['id'] = $row['id'];
             $products[$i]['name'] = $row['name'];
             $products[$i]['price'] = $row['price'];
+            $productsList[$i]['rate'] = $row['rate'];
+            $productsList[$i]['rate_count'] = $row['rate_count'];
             $products[$i]['is_new'] = $row['is_new'];
             $i++;
         }
@@ -171,6 +175,8 @@ class Product
             $products[$i]['code'] = $row['code'];
             $products[$i]['name'] = $row['name'];
             $products[$i]['price'] = $row['price'];
+            $productsList[$i]['rate'] = $row['rate'];
+            $productsList[$i]['rate_count'] = $row['rate_count'];
             $i++;
         }
         return $products;
@@ -186,7 +192,7 @@ class Product
         $db = Db::getConnection();
 
         // Получение и возврат результатов
-        $result = $db->query('SELECT id, name, price, is_new FROM product '
+        $result = $db->query('SELECT id, name, price, rate, rate_count, is_new FROM product '
                 . 'WHERE status = "1" AND is_recommended = "1" '
                 . 'ORDER BY id DESC');
         $i = 0;
@@ -195,6 +201,8 @@ class Product
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
             $productsList[$i]['price'] = $row['price'];
+            $productsList[$i]['rate'] = $row['rate'];
+            $productsList[$i]['rate_count'] = $row['rate_count'];
             $productsList[$i]['is_new'] = $row['is_new'];
             $i++;
         }
@@ -211,13 +219,15 @@ class Product
         $db = Db::getConnection();
 
         // Получение и возврат результатов
-        $result = $db->query('SELECT id, name, price, code FROM product ORDER BY id ASC');
+        $result = $db->query('SELECT id, name, price, rate, rate_count, code FROM product ORDER BY id ASC');
         $productsList = array();
         $i = 0;
         while ($row = $result->fetch()) {
             $productsList[$i]['id'] = $row['id'];
             $productsList[$i]['name'] = $row['name'];
             $productsList[$i]['code'] = $row['code'];
+            $productsList[$i]['rate'] = $row['rate'];
+            $productsList[$i]['rate_count'] = $row['rate_count'];
             $productsList[$i]['price'] = $row['price'];
             $i++;
         }
@@ -265,6 +275,8 @@ class Product
                 availability = :availability, 
                 description = :description, 
                 is_new = :is_new, 
+                rate = :rate, 
+                rate_count = :rate_count, 
                 is_recommended = :is_recommended, 
                 status = :status
             WHERE id = :id";
@@ -280,6 +292,8 @@ class Product
         $result->bindParam(':availability', $options['availability'], PDO::PARAM_INT);
         $result->bindParam(':description', $options['description'], PDO::PARAM_STR);
         $result->bindParam(':is_new', $options['is_new'], PDO::PARAM_INT);
+        $result->bindParam(':rate', $options['rate'], PDO::PARAM_STR);
+        $result->bindParam(':rate_count', $options['rate_count'], PDO::PARAM_INT);
         $result->bindParam(':is_recommended', $options['is_recommended'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
         return $result->execute();
@@ -366,5 +380,86 @@ class Product
         // Возвращаем путь изображения-пустышки
         return $path . $noImage;
     }
+
+    public static function getCommentsList(){
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Получение и возврат результатов
+        $result = $db->query('SELECT idcom, idprod, userid, com FROM comment');
+        $commentsList = array();
+        $i = 0;
+        while ($row = $result->fetch()) { 
+            $commentsList[$i]['idcom'] = $row['idcom'];
+            $commentsList[$i]['idprod'] = $row['idprod'];
+            $commentsList[$i]['com'] = $row['com'];
+            $commentsList[$i]['userid'] = $row['userid'];
+            $i++;
+        }
+        return $commentsList;
+    }
+
+
+    public static function reformArr($arr, $productId){
+        $resArr=array();
+        
+        foreach ($arr as $arrValue) {
+            if($arrValue['idprod']==$productId){
+                $resArr[]=$arrValue;
+
+            }
+
+            
+        }
+        return $resArr;
+    }
+
+    public static function CommentValidation($arr){        
+        
+        if(!User::isGuest()){
+            $bool=true;
+            $userId=$_SESSION['user'];
+            foreach ($arr as $com) {
+                if($com['userid']==$userId){
+                    $bool=false;
+                }
+            }
+        }
+        return $bool;
+    }
+
+    public static function createComment($product, $user, $coment)
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+
+        // Текст запроса к БД
+
+        $sql = 'INSERT INTO `comment`(`idprod`, `userid`, `com`) VALUES (:idprod, :userid, :com)';
+
+        // Получение и возврат результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':idprod', $product, PDO::PARAM_INT);
+        $result->bindParam(':userid', $user, PDO::PARAM_INT);
+        $result->bindParam(':com', $coment, PDO::PARAM_STR);
+        $result->execute();
+        $k=$result->fetch();
+
+        return $k; 
+    }
+
+    public static function createRate($id, $userId, $rateIn)
+    {
+        $productIn = Product::getProductById($id);
+        $rate = $productIn['rate'];
+        $rateCountIn = $productIn['rate_count'];
+        $productIn['rate'] = ($rate*$rateCountIn + $rateIn)/($rateCountIn + 1);
+        $productIn['rate_count'] = $rateCountIn + 1;
+        echo Product::updateProductById($id, $productIn); 
+
+        return $k; 
+    }
+
+
 
 }

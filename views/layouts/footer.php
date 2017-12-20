@@ -94,5 +94,18 @@
     
     <!-- Main Script -->
     <script src="/template/js/main.js"></script>
+
+    <script>
+            $(".add_to_cart_button").click(function () {
+
+                $.post("/product/addRateAjax/35/5", {}, function () {
+                    $("#rate_id").html(parseFloat(($("#rate_id").text())*
+                        parseInt($("#rate_count_id").text()) + 5)/
+                    (parseInt($("#rate_count_id").text())+1)
+                    );
+                });
+                return false;
+            });
+    </script>
   </body>
 </html>

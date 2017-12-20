@@ -13,13 +13,16 @@ return array(
     'cart/delete/([0-9]+)' => 'cart/delete/$1', // actionDelete в CartController    
     'cart/add/([0-9]+)' => 'cart/add/$1', // actionAdd в CartController    
     'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1', // actionAddAjax в CartController
+    'product/addRateAjax/([0-9]+)/([1-5])' => 'product/addRateAjax/$1/$2', // actionAddRateAjax в CartController
     'cart' => 'cart/index', // actionIndex в CartController
     // Пользователь:
     'user/register' => 'user/register',
     'user/login' => 'user/login',
     'user/logout' => 'user/logout',
+    'user/recovery'=> 'user/recovery',
     'cabinet/edit' => 'cabinet/edit',
     'cabinet' => 'cabinet/index',
+
     // Управление товарами:    
     'admin/product/create' => 'adminProduct/create',
     'admin/product/update/([0-9]+)' => 'adminProduct/update/$1',

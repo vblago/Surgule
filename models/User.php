@@ -224,4 +224,34 @@ class User
         return $result->fetch();
     }
 
+    public static function getUserByEmail($email)
+    {
+         if(User::checkEmailExists($email)){
+            // Соединение с БД
+            $db = Db::getConnection();
+
+            // Текст запроса к БД
+            $sql = 'SELECT * FROM user WHERE email = :email';
+
+            // Получение и возврат результатов. Используется подготовленный запрос
+            $result = $db->prepare($sql);
+            $result->bindParam(':email', $email, PDO::PARAM_INT);
+
+            // Указываем, что хотим получить данные в виде массива
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+            
+            return $result->fetch();
+
+        }
+        return null;
+    }
+
+    public static function postEmail($p){
+
+        $header=@header("Content-Type: text/html; chareset=utf8");
+        $k=  mail($p['email'], $header, $p['password']); 
+        return true;
+    }
+
 }

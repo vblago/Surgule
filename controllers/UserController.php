@@ -63,6 +63,8 @@ class UserController
      */
     public function actionLogin()
     {
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
         // Переменные для формы
         $email = false;
         $password = false;
@@ -118,6 +120,23 @@ class UserController
         
         // Перенаправляем пользователя на главную страницу
         header("Location: /");
+    }
+
+    public function actionRecovery(){
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+         if (isset($_POST['submit'])) {
+            $email = $_POST['email'];
+            
+            
+            $p=User::getUserByEmail($email);
+            if(!$p==null){ 
+                User::postEmail($p);   
+            }
+        }    
+        require_once(ROOT . '/views/user/recovery.php');
+        return true;
+        
     }
 
 }

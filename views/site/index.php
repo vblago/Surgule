@@ -212,4 +212,5 @@
             </div>
         </div>
     </div> <!-- End product widget area -->
+    
 <?php include ROOT . '/views/layouts/footer.php'; ?>
