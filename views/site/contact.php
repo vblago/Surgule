@@ -1,4 +1,4 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include ROOT . '/views/layouts/header1.php'; ?>
 
 <section>
     <div class="container">
@@ -21,13 +21,13 @@
                         <h2>Обратная связь</h2>
                         <h5>Есть вопрос? Напишите нам</h5>
                         <br/>
-                        <form action="#" method="post">
-                            <p>Ваша почта</p>
+                        <form action="#" method="post" style="margin-top: 20px;">
+                            <p style="margin-top: 20px;">Ваша почта</p>
                             <input type="email" name="userEmail" placeholder="E-mail" value="<?php echo $userEmail; ?>"/>
-                            <p>Сообщение</p>
+                            <p style="margin-top: 20px;">Сообщение</p>
                             <input type="text" name="userText" placeholder="Сообщение" value="<?php echo $userText; ?>"/>
                             <br/>
-                            <input type="submit" name="submit" class="btn btn-default" value="Отправить" />
+                            <input type="submit" name="submit" style="margin-top: 20px;" class="btn btn-default" value="Отправить" />
                         </form>
                     </div><!--/sign up form-->
                 <?php endif; ?>

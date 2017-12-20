@@ -31,7 +31,7 @@
 
   </head>
   <body style="padding: 0; margin: 0;">
-    <div style="padding: 0px; margin-top: -20px;">
+    <div style="padding: 0px;">
     <div class="header-area">
         <div class="container">
             <div class="row">
@@ -42,7 +42,7 @@
                             <li><a href="#"><i class="fa fa-heart"></i> Бажаннячка</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> Кошик</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Замовлення</a></li>
-                            <li><a href="/user/login/"><i class="fa fa-user"></i> Логін</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Логін</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include ROOT . '/views/layouts/header1.php'; ?>
 
 <section>
     <div class="container">
@@ -19,14 +19,14 @@
 
                     <div class="signup-form"><!--sign up form-->
                         <h2>Редактирование данных</h2>
-                        <form action="#" method="post">
+                        <form action="#" method="post" style="margin-top: 20px;">
                             <p>Имя:</p>
                             <input type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>"/>
                             
                             <p>Пароль:</p>
                             <input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/>
                             <br/>
-                            <input type="submit" name="submit" class="btn btn-default" value="Сохранить" />
+                            <input type="submit" style="margin-top: 20px;" name="submit" class="btn btn-default" value="Сохранить" />
                         </form>
                     </div><!--/sign up form-->
                 

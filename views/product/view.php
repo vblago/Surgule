@@ -47,12 +47,7 @@
                                         <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
                                         <p><b>Производитель:</b> <?php echo $product['brand']; ?></p>
                                         <p><b>Код:</b><?php echo $product['code']; ?></p>
-                                        <!-- <?php //foreach($resCom as $comatItem): ?>
-
-
-                                        <p><b>Код:</b><?php// echo  $comatItem['com']; ?></p>
-                                        <?php// endforeach; ?> -->
-
+                            
                                         <p id="rate_id" class="rate"><?php echo $product['rate']; ?></p>
                                         <p id="rate_count_id"><?php echo $product['rate_count']; ?></p>
                                     </div> 

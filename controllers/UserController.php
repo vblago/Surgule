@@ -133,6 +133,7 @@ class UserController
             if(!$p==null){ 
                 User::postEmail($p);   
             }
+            header("Location: /user/login/");
         }    
         require_once(ROOT . '/views/user/recovery.php');
         return true;

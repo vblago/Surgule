@@ -1,4 +1,4 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include ROOT . '/views/layouts/header1.php'; ?>
  	
 	<h1 style="margin: 20px;">Восстановление пароля</h1>
  	
@@ -8,7 +8,5 @@
 
    	</form>
 
-   			<?php if(mail("dragonwell26@gmail.com", "Eto", "fgskjfsn") ){
-   				echo 25;
-   			}; ?>
+   			
 <?php include ROOT . '/views/layouts/footer.php'; ?>

@@ -65,10 +65,18 @@ class ProductController
             $user = $_SESSION['user'];
             $rate = $_POST['rate'];
             $coment = $_POST['coment'];      
+            
+
             Product::createComment($productId, $user, $coment);
             Product::createRate($productId, $user, $rate);
+
             
-        }  
+               
+        } 
+
+
+        require_once(ROOT . '/views/product/view.php');
+        return true; 
     }
 
 

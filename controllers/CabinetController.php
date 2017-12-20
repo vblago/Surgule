@@ -31,6 +31,10 @@ class CabinetController
      */
     public function actionEdit()
     {
+
+        $totalPrice = CartHeader::getPrice();
+        $totalCount = CartHeader::getTotal();
+        
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
 
@@ -66,6 +70,7 @@ class CabinetController
                 // Если ошибок нет, сохраняет изменения профиля
                 $result = User::edit($userId, $name, $password);
             }
+            header("Location: /cabinet/");
         }
 
         // Подключаем вид
