@@ -74,33 +74,20 @@
                             <p><?php echo $product['description']; ?></p>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="profile">
-                                <h2>Reviews</h2>
-                                
-                                    
-                                    <div class="submit-review">
-                                                    
-                                    <div class="rating-chooser">
-                                        <p>Your rating</p>
+                                <h2>Оставить отзыв</h2>  
+                                <div class="submit-review">
+                                    <form action="<?php ProductController::actionCommentCreate($productId); ?>" method="post">
+                                        <p><label for="rate">Ваша оценка</label></p>
+                                        <div class="quantity">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="5" name="rate" min="1" max="5" step="0.5">
+                                        </div>  
+                                        
+                                        <p><label for="coment">Ваш отзыв</label></p>
+                                        <textarea name="coment" cols="30" rows="10"></textarea>
+                                        
+                                        <input type="submit" name="submit" class="btn btn-default" value="Отправить отзыв" >
 
-                                        <div class="rating-wrap-post">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <p><label for="review">Your review</label></p>
-                            
-
-                            <form action="<?php ProductController::actionCommentCreate($productId); ?>" method="post">
-                                    
-                                <textarea name="rate" cols="1" rows="1"></textarea>
-                                <textarea name="coment" cols="30" rows="10"></textarea>
-                                
-                                <input type="submit" name="submit" class="btn btn-default" value="Отправить отзыв" >
-
-                            </form>                 
+                                    </form>                 
                                     </div>
                                 </div>
                             </div>

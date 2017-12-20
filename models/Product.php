@@ -415,7 +415,7 @@ class Product
     }
 
     public static function CommentValidation($arr){        
-        
+        $bool=false;
         if(!User::isGuest()){
             $bool=true;
             $userId=$_SESSION['user'];
