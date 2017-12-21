@@ -1,7 +1,7 @@
 <?php include ROOT . '/views/layouts/header1.php'; ?>
 
-<section>
-    <div class="container">
+<section class="cartSect">
+    <div class="    ">
         <div class="row">
             <div class="col-md-2">
                 <div class="col-md-2">
@@ -20,10 +20,10 @@
             </div>
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
-                    <h2 class="title text-center">Корзина</h2>
+                    <h2 class="title text-center" style="margin-top: 15px;">Корзина</h2><br>
                     
                     <?php if ($productsInCart): ?>
-                        <p>Вы выбрали такие товары:</p>
+                        <p style="font-size: 18px;">Вы выбрали такие товары:</p>
                         <table class="table-bordered table-striped table">
                             <tr>
                                 <th>Код товара</th>
@@ -58,9 +58,10 @@
                         
                         <a class="btn btn-default checkout" href="/cart/checkout"><i class="fa fa-shopping-cart"></i> Оформить заказ</a>
                     <?php else: ?>
-                        <p>Корзина пуста</p>
                         
-                        <a class="btn btn-default checkout" href="/"><i class="fa fa-shopping-cart"></i> Вернуться к покупкам</a>
+                        <img src="/upload/images/products/cart1.png" width="300" height="250" style="margin-left: 30%;">
+                        <a style="font-size: 30px;" class="btn btn-default checkout" href="/catalog/"><i class="fa fa-shopping-cart"></i>     Ваша корзина пуста.<br> Вернуться к покупкам</a>
+
                     <?php endif; ?>
 
                 </div>

@@ -481,7 +481,7 @@ padding: 35px 0 180px;}
   margin-top: 15px;
 }
 .footer-top-area{
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .formReg{
   margin-top: 15px;
@@ -493,14 +493,14 @@ padding: 35px 0 180px;}
   margin-top: 15px;
 }
 .formLog{
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .RecBlock{
   text-align: 
 }
 .titleRec{
   margin-left: 40%;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .formRec{
 margin-left: 40%;
@@ -511,6 +511,10 @@ margin-left: 40%;
 .recBlock{
   padding-left: 500px;
 }
+.cartSect{
+  display: inline;
+}
+
 .footer-social margin-top: 20px
 
 .newsletter-form input[type="email"] {

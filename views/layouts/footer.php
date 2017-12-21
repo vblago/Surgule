@@ -94,7 +94,7 @@
     
     <!-- Main Script -->
     <script src="/template/js/main.js"></script>
-
+    <script src="/template/js/cart.js"></script>
     <script>
             $(".add_to_cart_button").click(function () {
 

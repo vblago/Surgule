@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-6">
-                <h4 class="aboutUs">Информация о магазине</h4>
+            <div class="col-sm-10 col-sm-offset-1 padding-right">
+                <h2 class="aboutUs" style="text-align: center;">Информация о магазине</h2>
 
                 <br/>
 

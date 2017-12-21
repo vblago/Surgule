@@ -18,8 +18,8 @@
                     <?php endif; ?>
 
                     <div class="signup-form"><!--sign up form-->
-                        <h2>Обратная связь</h2>
-                        <h5>Есть вопрос? Напишите нам</h5>
+                        <h2 style="margin-top: 15px;">Обратная связь</h2>
+                        <h5 style="margin-top: 5px;">Есть вопрос? Напишите нам</h5>
                         <br/>
                         <form action="#" method="post" style="margin-top: 20px;">
                             <p style="margin-top: 20px;">Ваша почта</p>

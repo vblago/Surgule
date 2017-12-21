@@ -82,6 +82,7 @@ class CartController
      */
     public function actionCheckout()
     {
+
         // Получием данные из корзины      
         $productsInCart = Cart::getProducts();
 
@@ -97,7 +98,7 @@ class CartController
         $productsIds = array_keys($productsInCart);
         $products = Product::getProdustsByIds($productsIds);
         $totalPrice = Cart::getTotalPrice($products);
-
+        $totalCount = CartHeader::getTotal();
         // Количество товаров
         $totalQuantity = Cart::countItems();
 

@@ -2,14 +2,13 @@
 
 <section>
     <div class="container">
-        <div class="row">
+        <div style="height: 300px; text-align: center;" class="row">
 
-            <h3>Кабинет пользователя</h3>
+            <h2 style="margin-top: 15px;">Кабинет пользователя</h2>
             
-            <h4>Привет, <?php echo $user['name'];?>!</h4>
-            <ul>
-                <li><a href="/cabinet/edit">Редактировать данные</a></li>
-            </ul>
+            <h4 style="font-size: 20px;margin-top: 15px;">Привет, <?php echo $user['name'];?>!</h4>
+            <br>
+           <p style="font-size: 17px;"><a href="/cabinet/edit" ">Редактировать данные</a></p>
             
         </div>
     </div>
