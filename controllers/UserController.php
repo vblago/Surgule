@@ -125,19 +125,27 @@ class UserController
     public function actionRecovery(){
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
-         if (isset($_POST['submit'])) {
+        
+
+        if (isset($_POST['submit'])) {
             $email = $_POST['email'];
             
-            
-            $p=User::getUserByEmail($email);
-            if(!$p==null){ 
-                User::postEmail($p);   
+            $errors = false;
+
+            if (!User::checkEmail($email)) {
+                $errors[] = 'Неправильный email';
             }
-            header("Location: /user/login/");
+
+            $p=User::getUserByEmail($email);
+            if(!$p==null && $errors == false){ 
+                User::postEmail($p);
+                header("Location: /user/login/");   
+            }
+            
         }    
         require_once(ROOT . '/views/user/recovery.php');
         return true;
         
     }
-
+   
 }
