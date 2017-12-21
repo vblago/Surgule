@@ -178,7 +178,7 @@
     </div> <!-- End promo area -->
     
     <div class="product-widget-area">
-        <div class="zigzag-bottom"></div>
+        
         <div class="container">
             <div class="row">
 

@@ -909,7 +909,7 @@ div.cart-collaterals ul.products li.product h3 {
 div.cart-collaterals ul.products li.product .price {
     color: #333;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     overflow: hidden;
 }
 .price > ins {
