@@ -76,7 +76,8 @@ class ProductController
 
             Product::createComment($productId, $user, $coment);
             Product::createRate($productId, $user, $rate);
-               
+
+            header("Location: /");   
     } 
 
 

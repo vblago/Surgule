@@ -455,9 +455,9 @@ class Product
         $rateCountIn = $productIn['rate_count'];
         $productIn['rate'] = ($rate*$rateCountIn + $rateIn)/($rateCountIn + 1);
         $productIn['rate_count'] = $rateCountIn + 1;
-        echo Product::updateProductById($id, $productIn); 
+        Product::updateProductById($id, $productIn); 
 
-        return $k; 
+        return true; 
     }
 
 
