@@ -42,7 +42,7 @@
                             <li><a href="#"><i class="fa fa-heart"></i> Бажаннячка</a></li>
                             <li><a href="cart.php"><i class="fa fa-user"></i> Кошик</a></li>
                             <li><a href="checkout.php"><i class="fa fa-user"></i> Замовлення</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> Логін</a></li>
+                            <li><a href="/user/login/"><i class="fa fa-user"></i> Логін</a></li>
                         </ul>
                     </div>
                 </div>
