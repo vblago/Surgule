@@ -375,7 +375,6 @@ z-index: 9;
 .maincontent-area {padding-bottom: 170px}
 
 .product-wid-title {
-  font-family: raleway;
   font-size: 30px;
   font-weight: 100;
   margin-bottom: 40px;
@@ -496,7 +495,16 @@ padding: 35px 0 180px;}
 .formLog{
   margin-top: 10px;
 }
-
+.titleRec{
+  text-align: left;
+  margin-top: 10px;
+}
+.formRec{
+  text-align: left;
+}
+.formInp{
+  width: 300px;
+}
 .footer-social margin-top: 20px
 
 .newsletter-form input[type="email"] {
