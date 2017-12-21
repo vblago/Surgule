@@ -18,12 +18,12 @@
                     <?php endif; ?>
 
                     <div class="signup-form"><!--sign up form-->
-                        <h2>Регистрация на сайте</h2>
-                        <form action="#" method="post">
-                            <input type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>"/>
-                            <input type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>"/>
-                            <input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/>
-                            <input type="submit" name="submit" class="btn btn-default" value="Регистрация" />
+                        <h2 class="titleReg">Регистрация на сайте</h2>
+                        <form action="#" method="post" class="formReg">
+                            <label>Введите ваше имя:</label><br><input type="text" name="name" placeholder="Имя" value="<?php echo $name; ?>"/><br><br>
+                            <label>Введите ваш e-mail:</label><br><input type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>"/><br><br>
+                            <label>Придумайте пароль:</label><br><input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/><br><br>
+                            <input type="submit" name="submit" class="btn btn-default" value="Регистрация" /><br><br>
                         </form>
                     </div><!--/sign up form-->
                 

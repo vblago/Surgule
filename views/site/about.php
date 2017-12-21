@@ -5,7 +5,7 @@
         <div class="row">
 
             <div class="col-lg-6">
-                <h4>Информация о магазине</h4>
+                <h4 class="aboutUs">Информация о магазине</h4>
 
                 <br/>
 

@@ -478,8 +478,26 @@ padding: 35px 0 180px;}
 
 .footer-social a:hover {background-color: #222;border-color: #666}
 
-.footer-social {margin-top: 20px}
+.aboutUs{
+  margin-top: 15px;
+}
+.footer-top-area{
+  margin-top: 10px;
+}
+.formReg{
+  margin-top: 15px;
+}
+.titleReg{
+  margin-top: 15px;
+}
+.titleLog{
+  margin-top: 15px;
+}
+.formLog{
+  margin-top: 10px;
+}
 
+.footer-social margin-top: 20px
 
 .newsletter-form input[type="email"] {
     background: none repeat scroll 0 0 #fff;
