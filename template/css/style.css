@@ -495,15 +495,21 @@ padding: 35px 0 180px;}
 .formLog{
   margin-top: 10px;
 }
+.RecBlock{
+  text-align: 
+}
 .titleRec{
-  text-align: left;
+  margin-left: 40%;
   margin-top: 10px;
 }
 .formRec{
-  text-align: left;
+margin-left: 40%;
 }
 .formInp{
   width: 300px;
+}
+.recBlock{
+  padding-left: 500px;
 }
 .footer-social margin-top: 20px
 
