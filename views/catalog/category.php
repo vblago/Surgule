@@ -3,20 +3,18 @@
     <div style="margin-top: 20px"class="container">
         <div class="row">
           <div class="col-md-2">
+                <nav>
+                    <ul class="mcd-menu">
                         <?php foreach ($categories as $categoryItem): ?>
-                            <a href="/category/<?php echo $categoryItem['id']; ?>">
-                                <div id = "category_style" class="panel-heading">
-                                    
-                                    <h4 class="panel-title">
-                                        
-                                            <?php echo $categoryItem['name']; ?>
-                                        
-                                    </h4>
-
-                                </div>
-                            </a>    
-                       <?php endforeach; ?> 
-                </div>
+                            <li>
+                                <a href="/category/<?php echo $categoryItem['id']; ?>" class="<?php if ($categoryItem['id'] == $categoryId) echo active?>">
+                                    <strong><?php echo $categoryItem['name']; ?></strong>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </nav>
+            </div>
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
