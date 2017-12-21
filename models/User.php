@@ -249,8 +249,8 @@ class User
 
     public static function postEmail($p){
 
-        $header=@header("Content-Type: text/html; chareset=utf8");
-        $k=  mail($p['email'], $header, $p['password']); 
+       
+        mail($p['email'], "Ваш пароль:", $p['password']); 
         return true;
     }
 

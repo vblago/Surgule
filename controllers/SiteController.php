@@ -66,6 +66,7 @@ class SiteController
                 $subject = 'Тема письма';
                 $result = mail($adminEmail, $subject, $message);
                 $result = true;
+                header("Location: /contacts/"); 
             }
         }
 
