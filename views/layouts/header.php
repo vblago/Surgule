@@ -96,7 +96,7 @@
                         <li class="<?php if ($aboutPage == "main") echo active?>"><a href="/">Домашня</a></li>
                         <li class="<?php if ($aboutPage == "catalog") echo active?>"><a href="/catalog/">Магазин</a></li>
                         <li class="<?php if ($aboutPage == "contact") echo active?>"><a href="/contacts/">Зворотній зв'язок</a></li>
-                        <li class="<?php if ($aboutPage == "register") echo active?>"><a href="user/register">Реєстрация</a></li>
+                        <li class="<?php if ($aboutPage == "register") echo active?>"><a href="/user/register/">Реєстрация</a></li>
                         <li class="<?php if ($aboutPage == "about") echo active?>"><a href="/about/">Про нас</a></li>
                     </ul>
                 </div>  

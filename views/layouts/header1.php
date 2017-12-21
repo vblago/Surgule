@@ -7,9 +7,9 @@
     <title>eElectronics - HTML eCommerce Template</title>
     
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'> -->
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -96,7 +96,7 @@
                         <li class="<?php if ($aboutPage == "main") echo active?>"><a href="/">Домашня</a></li>
                         <li class="<?php if ($aboutPage == "catalog") echo active?>"><a href="/catalog/">Магазин</a></li>
                         <li class="<?php if ($aboutPage == "contact") echo active?>"><a href="/contacts/">Зворотній зв'язок</a></li>
-                        <li class="<?php if ($aboutPage == "register") echo active?>"><a href="user/register">Реєстрация</a></li>
+                        <li class="<?php if ($aboutPage == "register") echo active?>"><a href="/user/register/">Реєстрация</a></li>
                         <li class="<?php if ($aboutPage == "about") echo active?>"><a href="/about/">Про нас</a></li>
                     </ul>
                 </div>  
