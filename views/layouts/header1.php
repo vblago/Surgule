@@ -38,11 +38,13 @@
                 <div class="col-md-8" >
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> Мій запис</a></li>
-                            <li><a href="#"><i class="fa fa-heart"></i> Бажаннячка</a></li>
-                            <li><a href="cart.php"><i class="fa fa-user"></i> Кошик</a></li>
-                            <li><a href="checkout.php"><i class="fa fa-user"></i> Замовлення</a></li>
+                        <?php if(User::isGuest()): ?>
                             <li><a href="/user/login/"><i class="fa fa-user"></i> Логін</a></li>
+                            <li><a href="/user/register/"><i class="fa fa-heart"></i>Реєстрация</a></li>
+                        <?php else: ?>
+                            <li><a href="/cabinet/"><i class="fa fa-heart"></i>Личный кабинет</a></li>
+                            <li><a href="/user/logout/"><i class="fa fa-heart"></i>Выход</a></li>
+                        <?php endif; ?>
                         </ul>
                     </div>
                 </div>
@@ -96,7 +98,6 @@
                         <li class="<?php if ($aboutPage == "main") echo active?>"><a href="/">Домашня</a></li>
                         <li class="<?php if ($aboutPage == "catalog") echo active?>"><a href="/catalog/">Магазин</a></li>
                         <li class="<?php if ($aboutPage == "contact") echo active?>"><a href="/contacts/">Зворотній зв'язок</a></li>
-                        <li class="<?php if ($aboutPage == "register") echo active?>"><a href="/user/register/">Реєстрация</a></li>
                         <li class="<?php if ($aboutPage == "about") echo active?>"><a href="/about/">Про нас</a></li>
                     </ul>
                 </div>  
