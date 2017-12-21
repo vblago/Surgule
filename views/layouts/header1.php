@@ -45,6 +45,7 @@
                             <li><a href="/cabinet/"><i class="fa fa-heart"></i>Личный кабинет</a></li>
                             <li><a href="/user/logout/"><i class="fa fa-heart"></i>Выход</a></li>
                         <?php endif; ?>
+                        <li><a href="#">Тут могла би бути ваша реклама</a></li>
                         </ul>
                     </div>
                 </div>

@@ -121,7 +121,7 @@
 
                         <?php foreach ($latestProducts as $product): ?>
                             <div class="single-product">
-                                <div style="height: 250px" class="product-f-image">
+                                <div style="height: 275px" class="product-f-image">
                                     <img style="vertical-align: middle;" src="<?php echo Product::getImage($product['id']); ?>" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
@@ -195,7 +195,7 @@
                         
                         <?php $counter = 0; foreach ($categoryProducts as $product): $counter++; if($counter == 4)break; ?>
                         <div class="single-wid-product">
-                            <img height="100px" width="100px" class="product-thumb" src="<?php echo Product::getImage($product['id']); ?>" alt="">
+                            <img class="product-thumb" src="<?php echo Product::getImage($product['id']); ?>" alt="">
                             <h2><a href="/product/<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a></h2>
                             <div class="product-wid-price">
                                 <ins>$<?php echo $product['price']; ?></ins> <del>$<?php echo $product['price']*1.2; ?></del>

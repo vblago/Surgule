@@ -95,6 +95,10 @@
     <!-- Main Script -->
     <script src="/template/js/main.js"></script>
     <script src="/template/js/cart.js"></script>
+
+    <script type="text/javascript" src="scripts/scroll_more.js"></script>
+    <script src="scripts/wow.min.js"></script>
+    <script>new WOW().init();</script>
     
   </body>
 </html>
