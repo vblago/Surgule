@@ -13,7 +13,7 @@ class ProductController
      */
     public function actionView($productId)
     {
-        $i = count($_SESSION['prodId']) + 1;
+        
 
         $latestProducts = Product::getLatestProducts(12);
         // Список категорий для левого меню
@@ -27,6 +27,17 @@ class ProductController
     
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
+
+        ProductController::setLastProduct($product);
+
+        // Подключаем вид
+        require_once(ROOT . '/views/product/view.php');
+        return true;
+    }
+
+    public static function setLastProduct($product)
+    {
+        $i = count($_SESSION['prodId']) + 1;
 
         $productsView = array();
         $productsView['pid'] = $product['id'];
@@ -49,10 +60,6 @@ class ProductController
             }
         }
         $i++;
-
-        // Подключаем вид
-        require_once(ROOT . '/views/product/view.php');
-        return true;
     }
 
     public function actionCommentCreate($productId)
@@ -69,10 +76,8 @@ class ProductController
 
             Product::createComment($productId, $user, $coment);
             Product::createRate($productId, $user, $rate);
-
-            
                
-        } 
+    } 
 
 
         require_once(ROOT . '/views/product/view.php');

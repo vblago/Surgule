@@ -109,7 +109,7 @@
                         <div class="related-products-wrapper">
                             <h2 class="related-products-title">Related Products</h2>
                             <div class="related-products-carousel">
-                                <?php foreach($_SESSION['prodId'] as $key => $value) { ?>
+                                <?php foreach(array_reverse($_SESSION['prodId']) as $key => $value) { if(!($value==$productId)): ?>
                                 <div class="single-product">    
 
                                     <div class="product-f-image">
@@ -131,7 +131,7 @@
                                     </div> 
                                    
                                 </div>    
-                                <?php } ?>
+                                <?php endif; } ?>
                                                                         
                             </div>
                         </div>
