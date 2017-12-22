@@ -13,63 +13,63 @@
 
             <table width="620px">
                 <tr>
-                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Админпанель</a></td>
-                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/order">Управление заказами</a></td>
-                    <td style="font-size: 25px">Просмотр заказа</td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Панель адмінів</a></td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/order">Керування замовленнями</a></td>
+                    <td style="font-size: 25px">Проглядання замовлення</td>
                 </tr>
             </table>  
         </div>
 
-            <h2>Просмотр заказа #<?php echo $order['id']; ?></h2>
+            <h2>Проглядання замовлення #<?php echo $order['id']; ?></h2>
             <br/>
 
 
 
 
-            <p style="font-size: 20px">Информация о заказе</p>
+            <p style="font-size: 20px">Информація про замовлення</p>
 
             <table style="font-family: sans-serif; font-style: oblique; color: #1D1BBF; font-size: 20px " width="50%">
                 <tr>
-                    <td>Номер заказа</td>
+                    <td>Номер замовлення</td>
                     <td><?php echo $order['id']; ?></td>
                 </tr>
                 <tr>
-                    <td>Имя клиента</td>
+                    <td>Ім'я клієнта</td>
                     <td><?php echo $order['user_name']; ?></td>
                 </tr>
                 <tr>
-                    <td>Телефон клиента</td>
+                    <td>Телефон клієнта</td>
                     <td><?php echo $order['user_phone']; ?></td>
                 </tr>
                 <tr>
-                    <td>Комментарий клиента</td>
+                    <td>Коментар клієнта</td>
                     <td><?php echo $order['user_comment']; ?></td>
                 </tr>
                 <?php if ($order['user_id'] != 0): ?>
                     <tr>
-                        <td>ID клиента</td>
+                        <td>ID клієнта</td>
                         <td><?php echo $order['user_id']; ?></td>
                     </tr>
                 <?php endif; ?>
                 <tr>
-                    <td><b>Статус заказа</b></td>
+                    <td><b>Статус замовлення</b></td>
                     <td><?php echo Order::getStatusText($order['status']); ?></td>
                 </tr>
                 <tr>
-                    <td><b>Дата заказа</b></td>
+                    <td><b>Дата замовлення</b></td>
                     <td><?php echo $order['date']; ?></td>
                 </tr>
             </table>
 
-            <p style="font-size: 20px">Товары в заказе</p>
+            <p style="font-size: 20px">Товари в замовленні</p>
 
             <table style="font-family: sans-serif; font-style: oblique; color: #1D1BBF; font-size: 20px " width="50%">
                 <tr style="font-family: sans-serif; font-style: oblique; color: black ">
-                    <th>ID товара</th>
-                    <th>Артикул товара</th>
-                    <th>Название</th>
-                    <th>Цена</th>
-                    <th>Количество</th>
+                    <th>ID товару</th>
+                    <th>Код товару</th>
+                    <th>Назва</th>
+                    <th>Ціна</th>
+                    <th>Кількість</th>
                 </tr>
                 <?php foreach ($products as $product): ?>
                     <tr>

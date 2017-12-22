@@ -13,23 +13,23 @@
         <div>
             <table width="500px">
                 <tr>
-                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Админпанель</a></td>
-                    <td style="font-size: 25px">Управление категориями</td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Панель адмінів</a></td>
+                    <td style="font-size: 25px">Керування категоріями</td>
                 </tr>
             </table>  
         </div>
             
             
-            <a style="font-size: 25px; text-decoration: none;color: #1D1BBF" href="/admin/category/create" class="btn btn-default back"><img src="/template/images/plus1.jpg" height="15px" width="15px" style="padding-left: 10px">Добавить категорию</a>
-            <h2>Список категорий</h2>
+            <a style="font-size: 25px; text-decoration: none;color: #1D1BBF" href="/admin/category/create" class="btn btn-default back"><img src="/template/images/plus1.jpg" height="15px" width="15px" style="padding-left: 10px">Додати категорію</a>
+            <h2>Список категорій</h2>
 
             <br/>
 
         <table style="font-family: sans-serif; font-style: oblique; color: #1D1BBF; font-size: 20px " width="100%">
                 <tr style="font-family: sans-serif; font-style: oblique; color: black; ">
-                    <th>ID категории</th>
-                    <th>Название категории</th>
-                    <th>Порядковый номер</th>
+                    <th>ID категориї</th>
+                    <th>Назва категориї</th>
+                    <th>Порядковий номер</th>
                     <th>Статус</th>
                     <th></th>
                     <th></th>
@@ -40,8 +40,8 @@
                         <td><?php echo $category['name']; ?></td>
                         <td><?php echo $category['sort_order']; ?></td>
                         <td><?php echo Category::getStatusText($category['status']); ?></td>  
-                        <td><a href="/admin/category/update/<?php echo $category['id']; ?>" title="Редактировать"><img src="/template/images/pencil.jpg" height="20px" width="20px" style="padding-left: 10px"></a></td>
-                        <td><a href="/admin/category/delete/<?php echo $category['id']; ?>" title="Удалить"><img src="/template/images/trash.jpg" height="20px" width="20px" style="padding-left: 10px"></a></td>
+                        <td><a href="/admin/category/update/<?php echo $category['id']; ?>" title="Редагувати"><img src="/template/images/pencil.jpg" height="20px" width="20px" style="padding-left: 10px"></a></td>
+                        <td><a href="/admin/category/delete/<?php echo $category['id']; ?>" title="Видалити"><img src="/template/images/trash.jpg" height="20px" width="20px" style="padding-left: 10px"></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

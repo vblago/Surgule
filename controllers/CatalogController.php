@@ -17,14 +17,6 @@ class CatalogController
 
         // Список последних товаров
         $latestProducts = Product::getLatestProducts(12);
-        $cat11= Product::getProductsListByCategory(11,1);
-        $cat13= Product::getProductsListByCategory(13,1);
-        $cat14= Product::getProductsListByCategory(14,1);
-        $cat15= Product::getProductsListByCategory(15,1);
-        $cat16= Product::getProductsListByCategory(16,1);
-        $cat17= Product::getProductsListByCategory(17,1);
-        
-        
         
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();

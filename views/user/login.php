@@ -15,15 +15,16 @@
                 <?php endif; ?>
 
                 <div class="signup-form"><!--sign up form-->
-                    <h2 class="titleLog">Вход на сайт</h2>
+                    <h2 class="titleLog">Вхід на сайт</h2>
+                    <br/>
                     <form action="#" method="post" class="formLog">
-                        <label>Введите ваш e-mal:</label><br><input type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>"/><br><br>  
-                        <label>Введите пароль:</label><br><input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/><br>
-                        <input type="submit" name="submit" style="margin-top: 20px;" class="btn btn-default" value="Вход" />
+                        <label>Введіть ваш e-maіl:</label><br><input type="email" name="email" placeholder="E-mail" value="<?php echo $email; ?>"/><br><br>  
+                        <label>Введіть пароль:</label><br><input type="password" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/><br>
+                        <input type="submit" name="submit" style="margin-top: 20px;" class="btn btn-default" value="Вхід" />
                         <br><br>
                     </form>
                     <div>
-                        <a href="/user/recovery/">Забыли пароль?</a>
+                        <a href="/user/recovery/">Забули пароль?</a>
                     </div>
                 </div><!--/sign up form-->
 

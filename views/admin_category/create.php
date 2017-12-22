@@ -9,13 +9,13 @@
         <div>
             <table width="780px">
                 <tr>
-                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Админпанель</a></td>
-                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/order">Управление категориями</a></td>
-                    <td style="font-size: 30px">Редактировать категорию</td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Панель адмінів</a></td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/order">Керування категоріями</a></td>
+                    <td style="font-size: 30px">Редагувати категорію</td>
                 </tr>
             </table>  
         </div>
-            <h2>Добавить новую категорию</h2>
+            <h2>Додати нову категорію</h2>
 
             <br/>
 
@@ -31,16 +31,16 @@
                 <div class="login-form">
                     <form action="#" method="post">
 
-                        <p>Название</p>
+                        <p>Назва</p>
                         <input type="text" name="name" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
-                        <p>Порядковый номер</p>
+                        <p>Порядковий номер</p>
                         <input type="text" name="sort_order" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
                         <p>Статус</p>
                         <select name="status" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 130px; border-style: none;">
-                            <option value="1" selected="selected">Отображается</option>
-                            <option value="0">Скрыта</option>
+                            <option value="1" selected="selected">Відібражається</option>
+                            <option value="0">Сховано/option>
                         </select>
 
                         <br><br>

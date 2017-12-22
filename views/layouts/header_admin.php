@@ -5,7 +5,7 @@
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content=""> -->
-        <title>Админпанель</title>
+        <title>Панель для адмінів</title>
         <!-- <link href="/template/css/bootstrap.min.css" rel="stylesheet">
         <link href="/template/css/font-awesome.min.css" rel="stylesheet">
         <link href="/template/css/prettyPhoto.css" rel="stylesheet">
@@ -30,7 +30,7 @@
         <div >
             <table width="100%">
                 <tr>
-                <td><a href="/admin" style=" font-size: 30px; text-decoration: none; color: #1D1BBF"><img src="/template/images/pencil.jpg" height="25px" width="25px" style="padding-left: 10px; font-size: 30px">Админпанель</a></td>
+                <td><a href="/admin" style=" font-size: 30px; text-decoration: none; color: #1D1BBF"><img src="/template/images/pencil.jpg" height="25px" width="25px" style="padding-left: 10px; font-size: 30px">Панель для адмінів</a></td>
                 <td><a href="/" style=" font-size: 30px; text-decoration: none; color: #1D1BBF"><img src="/template/images/exit.png" height="25px" width="25px" style="padding-right:  10px;">На сайт</a></td>
             </tr>
             </table>  

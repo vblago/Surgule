@@ -19,14 +19,14 @@
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
-                    <h2 class="title text-center" style="margin-top: 15px;">Корзина</h2>
+                    <h2 class="title text-center" style="margin-top: 15px;">Кошик</h2>
 
 
                     <?php if ($result): ?>
-                        <p>Заказ оформлен. Мы Вам перезвоним.</p>
+                        <p>Замовлення оформлене. Ми вам передзвонимо</p>
                     <?php else: ?>
 
-                        <p style="font-size: 17px;">Выбрано товаров: <?php echo $totalQuantity; ?>, на сумму: <?php echo $totalPrice; ?>, $</p><br/>
+                        <p style="font-size: 17px;">Обрано товарів: <?php echo $totalQuantity; ?>, на суму: <?php echo $totalPrice; ?>, $</p><br/>
 
                         <?php if (!$result): ?>                        
 
@@ -39,23 +39,23 @@
                                     </ul>
                                 <?php endif; ?>
 
-                                <p style="font-size: 16px;">Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
+                                <p style="font-size: 16px;">Задля оформлення замовлення заповніть поля. Наш оператор вам передзвонить</p>
 
                                 <div class="login-form">
                                     <form action="#" method="post">
 
-                                        <p style="font-size: 17px;"><b>Ваше имя</b></p>
+                                        <p style="font-size: 17px;"><b>Ваше ім'я</b></p>
                                         <input type="text" name="userName" placeholder="" value="<?php echo $userName; ?>"/>
     
                                         <p style="font-size: 17px;"><b>Номер телефона</b></p>
                                         <input type="text" name="userPhone" placeholder="Ваш номер телефона" value="<?php echo $userPhone; ?>"/>
 
-                                        <p style="font-size: 17px;"><b>Комментарий к заказу</b></p>
-                                        <input type="text" name="userComment" placeholder="Сообщение" value="<?php echo $userComment; ?>"/>
+                                        <p style="font-size: 17px;"><b>Комментар до замовлення</b></p>
+                                        <input type="text" name="userComment" placeholder="Повідомлення" value="<?php echo $userComment; ?>"/>
 
                                         <br/>
                                         <br/>
-                                        <input type="submit" name="submit" class="btn btn-default" value="Оформить" />
+                                        <input type="submit" name="submit" class="btn btn-default" value="Оформити" />
                                     </form>
                                 </div>
                             </div>

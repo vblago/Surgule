@@ -1225,7 +1225,6 @@ font-size:11px;
   
   /* == */
   border-left: 4px solid #43BE45;
-  border-right: 4px solid #43BE45;
   margin: 0 -4px;
   /* == */
 }
@@ -1253,7 +1252,6 @@ font-size:11px;
   position: absolute;
   top: 42%;
   right: 0;
-  border-right: 5px solid #43BE45;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
@@ -1353,7 +1351,6 @@ font-size:11px;
   /* == */
   top: 25px;
   left: -9px;
-  border-right: 5px solid #43BE45;
   border-bottom: 5px solid transparent;
   border-top: 5px solid transparent;
   /* == */

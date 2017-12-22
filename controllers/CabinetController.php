@@ -12,6 +12,9 @@ class CabinetController
      */
     public function actionIndex()
     {
+        // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
+        
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
 
@@ -31,6 +34,8 @@ class CabinetController
      */
     public function actionEdit()
     {
+        // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
 
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();

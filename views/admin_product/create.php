@@ -9,14 +9,14 @@
         <div>
             <table width="800px">
                 <tr>
-                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Админпанель</a></td>
-                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/product">Управление товарами</a></td>
-                    <td style="font-size: 25px">Добавить товар</td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin">Панель адмінів</a></td>
+                    <td><a style="text-decoration: none; background-color: #FC4605; color: white; font-size: 25px" href="/admin/product">Керування товарами</a></td>
+                    <td style="font-size: 25px">Додати товар</td>
                 </tr>
             </table>  
         </div>
 
-            <h2>Добавить новый товар</h2>
+            <h2>Додати новий товар</h2>
 
             <br/>
 
@@ -32,16 +32,16 @@
                 <div class="login-form">
                     <form action="#" method="post" enctype="multipart/form-data">
 
-                        <p>Название товара</p>
+                        <p>Назва товару</p>
                         <input type="text" name="name" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
-                        <p>Артикул</p>
+                        <p>Код</p>
                         <input type="text" name="code" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
-                        <p>Стоимость, $</p>
+                        <p>Вартість, $</p>
                         <input type="text" name="price" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
-                        <p>Категория</p>
+                        <p>Категорія</p>
                         <select name="category_id" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 100px; border-style: none">
                             <?php if (is_array($categoriesList)): ?>
                                 <?php foreach ($categoriesList as $category): ?>
@@ -54,50 +54,50 @@
 
                         <br/><br/>
 
-                        <p>Производитель</p>
+                        <p>Виробник</p>
                         <input type="text" name="brand" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none">
 
-                        <p>Изображение товара</p>
+                        <p>Зображення товару</p>
                         <input type="file" name="image" placeholder="" value="" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 230px; border-style: none;">
 
-                        <p>Детальное описание</p>
+                        <p>Опис</p>
                         <textarea name="description" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 300px; border-style: none"></textarea>
 
                         <br/><br/>
 
-                        <p>Наличие на складе</p>
+                        <p>Наявність на складі</p>
                         <select name="availability" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 60px; border-style: none;">
-                            <option value="1" selected="selected">Да</option>
-                            <option value="0">Нет</option>
+                            <option value="1" selected="selected">Так</option>
+                            <option value="0">Ні</option>
                         </select>
 
                         <br/><br/>
 
                         <p>Новинка</p>
                         <select name="is_new" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 60px; border-style: none;">
-                            <option value="1" selected="selected">Да</option>
-                            <option value="0">Нет</option>
+                            <option value="1" selected="selected">Так</option>
+                            <option value="0">Ні</option>
                         </select>
 
                         <br/><br/>
 
-                        <p>Рекомендуемые</p>
+                        <p>Рекомендовані</p>
                         <select name="is_recommended" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 60px; border-style: none;">
-                            <option value="1" selected="selected">Да</option>
-                            <option value="0">Нет</option>
+                            <option value="1" selected="selected">Так</option>
+                            <option value="0">Ні</option>
                         </select>
 
                         <br/><br/>
 
                         <p>Статус</p>
                         <select name="status" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 130px; border-style: none;">
-                            <option value="1" selected="selected">Отображается</option>
-                            <option value="0">Скрыт</option>
+                            <option value="1" selected="selected">Відібражається</option>
+                            <option value="0">Сховано</option>
                         </select>
 
                         <br/><br/>
 
-                        <input type="submit" name="submit" class="btn btn-default" value="Сохранить" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 100px; border-style: none;">
+                        <input type="submit" name="submit" class="btn btn-default" value="Зберегти" style="border-radius: 3px; background-color: #B2B2BC; height: 30px; width: 100px; border-style: none;">
 
                         <br/><br/>
 

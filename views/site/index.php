@@ -31,7 +31,7 @@
                                                 <h2>Збираємо віночки </h2>
                                                 <p>Вам набридло бачити кохану сумною, а тут ще скоро свята Івана-Купала?</p>
                                                 <p>Не хвилюйтесь ми зберемо найкращий віночок для вашої дівчини, ще й через полум'я можемо пострибати</p>
-                                                <a href="" class="readmore">Дізнатися більше</a>
+                                                <a href="/product/41/" class="readmore">Дізнатися більше</a>
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                             <div class="slide-content">
                                                 <h2>Ремонтуємо дошки для серфінгу</h2>
                                                 <p>Ви тільки-но з Австралії, а вашу дошку покусала акула, не хвилюйтесь, наші майстри зроблять кращий ремонт вашої дошки за мінімальний строк</p>
-                                                <a href="" class="readmore">Дізнатися більше</a>
+                                                <a href="/product/39/" class="readmore">Дізнатися більше</a>
                                             </div>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@
                                                 <h2>Знищуємо бур'ян</h2>
                                                 <p>Будинок вашої бабці заріс величезним бур'яном, а у вас знову приступ ліні?</p>
                                                 <p>Наші спеціалісти допоможуть вам очистити будинок від зайвої зелені без використання хімічних препаратів</p>
-                                                <a href="" class="readmore">Дізнатися більше</a>
+                                                <a href="/product/52/" class="readmore">Дізнатися більше</a>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="brand-wrapper">
-                        <h2 class="section-title">Brands</h2>
+                        <h2 class="section-title">Наші вигадані партнери</h2>
                         <div class="brand-list">
                             <img src="upload/images/services_logo__1.jpg" alt="">
                             <img src="upload/images/services_logo__2.jpg" alt="">
@@ -116,7 +116,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Latest Products</h2>
+                        <h2 class="section-title">Останні продукти</h2>
                         <div class="product-carousel">
 
                         <?php foreach ($latestProducts as $product): ?>
@@ -124,8 +124,8 @@
                                 <div style="height: 275px" class="product-f-image">
                                     <img style="vertical-align: middle;" src="<?php echo Product::getImage($product['id']); ?>" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single_product.php" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> До корзини</a>
+                                        <a href="/product/<?php echo $product['id']; ?>" class="view-details-link"><i class="fa fa-link"></i> Деталі</a>
                                     </div>
                                 </div>
                                 
@@ -152,25 +152,25 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo">
                         <i class="fa fa-refresh"></i>
-                        <p>30 Days return</p>
+                        <p>30 Днів на повернення</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo">
                         <i class="fa fa-truck"></i>
-                        <p>Free shipping</p>
+                        <p>Безкоштовна доставка</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo">
                         <i class="fa fa-lock"></i>
-                        <p>Secure payments</p>
+                        <p>Захищені платежі та ніяких ризиків</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo">
                         <i class="fa fa-gift"></i>
-                        <p>New products</p>
+                        <p>Нові продукти та нові категорії</p>
                     </div>
                 </div>
             </div>
@@ -187,11 +187,15 @@
                 $count++; 
                 if($count == 4)break;
                 $categoryProducts = Product::getProductsListByCategory($categoryItem['id'], 1);
-            ?>     
+            ?>   
+            
                 <div class="col-md-4">
+                    <?php if($count == 3): ?>
+                        <img style="padding-left:20px;" src="/template/images/home/kurlik.jpg" height="90px" width="90px">
+                    <?php endif; ?>
                     <div class="single-product-widget">
                         <h2 class="product-wid-title"><?php echo $categoryItem['name']; ?></h2>
-                        <a href="/category/<?php echo $categoryItem['id']; ?>" class="wid-view-more">View All</a>
+                        <a href="/category/<?php echo $categoryItem['id']; ?>" class="wid-view-more">Подивитися усе</a>
                         
                         <?php $counter = 0; foreach ($categoryProducts as $product): $counter++; if($counter == 4)break; ?>
                         <div class="single-wid-product">

@@ -23,16 +23,16 @@
                     <?php foreach ($categoryProducts as $product): ?>
                         <div class="col-sm-4">
                             <div class="product-image-wrapper">
-                                <div style="height: 400px;" class="single-products">
+                                <div style="margin-top:20px;" height='300';" class="single-products">
                                     <div class="productinfo text-center">
-                                        <img style="height: 200px"  src="<?php echo Product::getImage($product['id']); ?>" alt="" />
+                                        <img height='200'  src="<?php echo Product::getImage($product['id']); ?>" alt="" />
                                         <h2>$<?php echo $product['price']; ?></h2>
                                         <p>
                                             <a href="/product/<?php echo $product['id']; ?>">
                                                 <?php echo $product['name']; ?>
                                             </a>
                                         </p>
-                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="btn btn-default add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>До кошика</a>
                                     </div>
                                 </div>
                             </div>

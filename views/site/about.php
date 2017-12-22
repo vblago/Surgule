@@ -3,28 +3,16 @@
 <section>
     <div class="container">
         <div class="row">
-
-            <div class="col-sm-10 col-sm-offset-1 padding-right">
-                <h2 class="aboutUs" style="text-align: center;">Информация о магазине</h2>
-
                 <br/>
+            <div class="col-sm-10 col-sm-offset-1 padding-right">
+                <h1 class="aboutUs" style="text-align: center;">Інформація о магазині</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac 
-                    lorem sit amet erat venenatis porta. Pellentesque ultricies 
-                    neque nec eros fringilla, vitae euismod massa posuere. Nullam 
-                    volutpat, nisl efficitur convallis bibendum, turpis nunc 
-                    ullamcorper metus, a iaculis sapien sem a est. Maecenas ac 
-                    vestibulum ex. Nullam interdum quis mi ut venenatis. </p>
 
-                <p>Phasellus iaculis purus elementum felis varius, vel viverra massa 
-                    tincidunt. Aliquam vulputate dictum luctus. Aenean lectus 
-                    risus, pellentesque eget lectus eu, sodales fringilla magna. 
-                    Nunc diam mi, dictum ac est non, molestie eleifend ligula.
-                    Nam pharetra vulputate lectus. Duis non quam in est interdum 
-                    pellentesque condimentum a elit. Praesent eget turpis euismod, 
-                    maximus lectus sed, elementum mi. Nulla enim tortor, malesuada 
-                    suscipit finibus at, eleifend eget urna. Mauris laoreet metus 
-                    a nisl bibendum, nec maximus urna molestie.</p>
+<br/>
+<br/>
+                <p>Кожен день ми бачимо, що відбувається навколо, що людям стає байдуже. Байдуже на оточення, на себе, на свою роботу. Суспільство поступово стає окремими особинами, що вважають себе краще за інших, думають, що, якщо вони особливі, то вони є володарами світу. На думку адміністрації - це не так.</p>
+
+                <p>У світі відбувається щось незрозуміле, тому ми вирішили зробити цей магазин, аби нагадати людям, хто вони, аби змусити подумати, що відбувається, ми не хотіли нікого образити чи зруйнувати психіку, ми хотіли змусити замислитися, сподіваюсь, хоча б з плином часу нам вдасться.</p>
             </div>
         </div>
     </div>

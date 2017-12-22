@@ -10,6 +10,7 @@
                 <nav>
                     <ul class="mcd-menu">
                         <?php foreach ($categories as $categoryItem): ?>
+                        <br/>
                             <li>
                                 <a href="/category/<?php echo $categoryItem['id']; ?>" class="<?php if ($categoryItem['id'] == $categoryId) echo active?>">
                                     <strong><?php echo $categoryItem['name']; ?></strong>
@@ -24,7 +25,7 @@
                     <div class="product-content-right">
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
+                                <img style="heigth:400px; width:300px;" src="<?php echo Product::getImage($product['id']); ?>" alt="" />
                             </div>
                             
                             <div class="col-sm-6">
@@ -38,52 +39,56 @@
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="add_to_cart_button" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                        <a href="/cart/add/<?php echo $product['id']; ?>" class="add_to_cart_button" data-id="<?php echo $product['id']; ?>"><i class="fa fa-shopping-cart"></i>До кошика</a>
                                     </form>   
                                     
                                     <div class="product-inner-category">
-                                        <p><b>Наличие:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
-                                        <p><b>Производитель:</b> <?php echo $product['brand']; ?></p>
+                                        <p><b>Наявність:</b> <?php echo Product::getAvailabilityText($product['availability']); ?></p>
+                                        <p><b>Виробник:</b> <?php echo $product['brand']; ?></p>
                                         <p><b>Код:</b><?php echo $product['code']; ?></p>
                             
-                                        <p id="rate_id" class="rate"><?php echo $product['rate']; ?></p>
-                                        <p id="rate_count_id"><?php echo $product['rate_count']; ?></p>
+                                        <p><b>Рейтинг:</b><?php if($product['rate']>0): ?>
+                                        <?php echo $product['rate']; ?>/5(<?php echo $product['rate_count']; ?>)
+                                        <?php else: ?>
+                                        Жодногої оцінки досі :\
+                                        <?php endif; ?>
+                                        </p>
                                     </div> 
                                 </div>
                             </div>
                         </div>
 
-                        <div role="tabpanel">
+                        <div role="tabpanel" style="padding-top:20px;">
                             <ul class="product-tab" role="tablist">
-                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Трішки опису</a></li>
 
 
-                            <?php if(Product::CommentValidation($resCom)):?><li role="presentation"><a   href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li><?php endif; ?>
+                            <?php if(Product::CommentValidation($resCom)):?><li role="presentation"><a   href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Залишити відгук</a></li><?php endif; ?>
                                             
                             </ul>
                             <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="home">
-                            <h2>Product Description</h2>  
+     
                             <p><?php echo $product['description']; ?></p>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="profile">
-                                <h2>Оставить отзыв</h2>  
+                                <h2>Ваш відгук</h2>  
                                 <div class="submit-review">
                                     <form action="<?php ProductController::actionCommentCreate($productId); ?>" method="post">
-                                        <p style="margin-top: 15px;"><label for="rate">Ваша оценка</label></p>
+                                        <p style="margin-top: 15px;"><label for="rate">Ваша оцінка</label></p>
 
                                         <div style="margin-bottom:  20px; float: none;" class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="5" name="rate" min="1" max="5" step="0.5">
                                         </div>
                                         <div >
                                         
-                                        <p><label for="coment">Ваш отзыв</label></p>
+                                        <p><label for="coment">Ваш відгук</label></p>
 
                                         </div>
                                         <textarea style="margin-top: 20px;" name="coment" cols="30" rows="10"></textarea>
                                         
                                         
-                                        <input type="submit" name="submit" class="btn btn-default" value="Отправить отзыв" >
+                                        <input type="submit" name="submit" class="btn btn-default" value="Відправити" >
 
 
                                     </form>                 
@@ -95,7 +100,7 @@
                         
                         
                     <div>
-                        <h1 align="center">Комментарии</h1>
+                        <h2 align="center">Комментарі</h2>
 
                             <?php foreach($resCom as $comatItem): ?>
                                  <p>Автор:   
@@ -111,14 +116,13 @@
                     </div>
                     
                         <div class="related-products-wrapper">
-                            <h2 class="related-products-title">Related Products</h2>
+                            <h2 class="related-products-title">Товари, які дивилися</h2>
                             <div class="related-products-carousel">
                                 <?php foreach(array_reverse($_SESSION['prodId']) as $key => $value) { if(!($value==$productId)): ?>
                                 <div class="single-product">    
-
                                     <div class="product-f-image">
                                     <?php $product = Product::getProductById($value) ?>
-                                        <img src="<?php echo Product::getImage($product['id']); ?>" alt="">  
+                                        <img style="padding-top:-20px;" src="<?php echo Product::getImage($product['id']); ?>" alt="">  
                                         <div class="product-hover">
                                             <?php $product = Product::getProductById($value) ?>
                                             <a href="/cart/add/<?php echo $product['id']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
@@ -127,7 +131,7 @@
                                         </div>
                                     </div>
 
-                                    <h2><a href="/product/<?php echo $product['id']; ?>"><?php $product = Product::getProductById($value); echo $product['name']; echo $value ?></a></h2>
+                                    <h2><a href="/product/<?php echo $product['id']; ?>"><?php $product = Product::getProductById($value); echo $product['name']; ?></a></h2>
 
                                     <div class="product-carousel-price">
                                         <ins>$<?php $product = Product::getProductById($value); echo $product['price']; ?></ins> <del>$<?php $product = Product::getProductById($value); echo $product['price']*1.2; ?></del>

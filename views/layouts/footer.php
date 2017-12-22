@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>e<span>Electronics</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <h2><a href=""><span style="color: #FFFFFF;">BC</span><span>Market</span></a></h2>
+                        <p>Ми щиро вибачаємось, якщо наші жарти вас скривдили, проте можливо варто замислитись. Цей сайт несе в собі соцальний характер, він спрямований на те, щоб змусити людей замислитися над тим, що відбувається навколо, це була наша головна ціль</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -18,38 +18,48 @@
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
+                        <h2 class="footer-wid-title" style="font-family:'Times New Roman' ">Навігатор </h2>
                         <ul>
-                            <li><a href="#">My account</a></li>
-                            <li><a href="#">Order history</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Vendor contact</a></li>
-                            <li><a href="#">Front page</a></li>
+                            <?php if(User::isGuest()): ?>
+                            <li><a href="/user/login/"> Логін</a></li>
+                            <li><a href="/user/register/">Реєстрація</a></li>
+                            <?php else: ?>
+                            <li><a href="/cabinet/"></i>Мій аккаунт</a></li>
+                            <li><a href="/user/logout/"></i>Вихід</a></li>
+                            <?php endif; ?>
+                            <li><a href="#">Воно нічого не дасть</a></li>
+                            <li><a href="/cart/">Кошик</a></li>
+                            <li><a href="/index.php/">Головна сторінка</a></li>
                         </ul>                        
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categories</h2>
+                        <h2 class="footer-wid-title" style="font-family:'Times New Roman' ">Категорії</h2>
                         <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            <li><a href="#">Home accesseries</a></li>
-                            <li><a href="#">LED TV</a></li>
-                            <li><a href="#">Computer</a></li>
-                            <li><a href="#">Gadets</a></li>
+                            <?php foreach ($categories as $categoryItem): ?>
+                            <li>
+                                <a href="/category/<?php echo $categoryItem['id']; ?>" class="<?php if ($categoryItem['id'] == $categoryId) echo active?>"><?php echo $categoryItem['name']; ?>
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
                         </ul>                        
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                        <h2 class="footer-wid-title">Зворотній зв'язок</h2>
+                        <p>Зареєструйтесь, будь ласка, аби розмовляти з адміністрацією</p>
                         <div class="newsletter-form">
                             <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Subscribe">
+                                <input type="email" placeholder="Введіть e-mail">
+                            </form action="#">
+                            <br/>
+                            <form>
+                                
+                                <input type="submit" value="Відправити">
                             </form>
                         </div>
                     </div>
@@ -63,7 +73,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 eElectronics. All Rights Reserved. Coded with <i class="fa fa-heart"></i> by <a href="http://wpexpand.com" target="_blank">WP Expand</a></p>
+                        <p>&copy; 2017 BVMK Inc. All Rights Reserved.</p>
                     </div>
                 </div>
                 
@@ -98,7 +108,6 @@
 
     <script type="text/javascript" src="scripts/scroll_more.js"></script>
     <script src="scripts/wow.min.js"></script>
-    <script>new WOW().init();</script>
     
   </body>
 </html>

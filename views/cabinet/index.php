@@ -3,12 +3,12 @@
 <section>
     <div class="container">
         <div style="height: 300px; text-align: center;" class="row">
-
-            <h2 style="margin-top: 15px;">Кабинет пользователя</h2>
-            
-            <h4 style="font-size: 20px;margin-top: 15px;">Привет, <?php echo $user['name'];?>!</h4>
+<br/>
+            <h1 style="margin-top: 15px;">Кабінет користувача</h1>
+           <br/> 
+            <h4 style="font-size: 20px;margin-top: 15px;">Привіт, <?php echo $user['name'];?>!</h4>
             <br>
-           <p style="font-size: 17px;"><a href="/cabinet/edit" ">Редактировать данные</a></p>
+           <p style="font-size: 17px;"><a href="/cabinet/edit" ">Редагувати дані</a></p>
             
         </div>
     </div>

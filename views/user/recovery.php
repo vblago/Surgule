@@ -7,12 +7,12 @@
             <?php endforeach; ?>
         </ul>
     <?php endif; ?>
-		<h1 class="titleRec" ">Восстановление пароля</h1><br>
+		<h1 class="titleRec" ">Відновлення пароля</h1><br>
 	 	
 	 	<form action="#" method="post" class="formRec">
-	        <label style="font-size: 18px;">Введите ваш e-mail:</label><br><input type="text" name="email" class="formInp" placeholder="E-mail">
+	        <label style="font-size: 18px;">Введіть ваш e-mail:</label><br><input type="text" name="email" class="formInp" placeholder="E-mail">
 	        <br><br>
-	        <p><input type="submit" name="submit" class="btn btn-default" value="Восстановить пароль" ></p><br>
+	        <p><input type="submit" name="submit" class="btn btn-default" value="Відновити пароль" ></p><br>
 
 	   	</form>	
 </div>

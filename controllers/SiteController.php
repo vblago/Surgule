@@ -35,6 +35,9 @@ class SiteController
      */
     public function actionContact()
     {
+        // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
+        
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
 
@@ -82,6 +85,9 @@ class SiteController
      */
     public function actionAbout()
     {
+        // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
+        
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
 

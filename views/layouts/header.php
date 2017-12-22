@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eElectronics - HTML eCommerce Template</title>
+    <title>BCMarket</title>
     
     <!-- Google Fonts -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -39,11 +39,11 @@
                     <div class="user-menu">
                         <ul>
                             <?php if(User::isGuest()): ?>
-                            <li><a href="/user/login/"><i class="fa fa-user"></i> Логін</a></li>
-                            <li><a href="/user/register/"><i class="fa fa-heart"></i>Реєстрация</a></li>
+                            <li><a href="/user/login/"><i class="fa fa-user"></i> Вхід</a></li>
+                            <li><a href="/user/register/"><i class="fa fa-heart"></i>Реєстрація</a></li>
                         <?php else: ?>
-                            <li><a href="/cabinet/"><i class="fa fa-heart"></i>Личный кабинет</a></li>
-                            <li><a href="/user/logout/"><i class="fa fa-heart"></i>Выход</a></li>
+                            <li><a href="/cabinet/"><i class="fa fa-heart"></i>Особистий кабінет</a></li>
+                            <li><a href="/user/logout/"><i class="fa fa-heart"></i>Вихід</a></li>
                         <?php endif; ?>
                         <li><a href="#">Тут могла би бути ваша реклама</a></li>
                         </ul>
@@ -78,13 +78,13 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="logo">
-                        <h1><a href="home.php"><span>Jogle</span></a></h1>
+                        <h1><a href="/index.php"><span style="color: #262626;">BC</span><span>Market</span></a></h1>
                     </div>
                 </div>
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="/cart/">Cart - <span class="cart-amunt">$ <?php echo $totalPrice;?></span> <i class="fa fa-shopping-cart"></i> <span class="product-count"><?php echo $totalCount;?></span></a>
+                        <a href="/cart/">Кошик - <span class="cart-amunt">$ <?php echo $totalPrice;?></span> <i class="fa fa-shopping-cart"></i> <span class="product-count"><?php echo $totalCount;?></span></a>
                     </div>
                 </div>
             </div>

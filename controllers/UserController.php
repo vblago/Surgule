@@ -10,6 +10,9 @@ class UserController
      */
     public function actionRegister()
     {
+        // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
+        
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
         
@@ -63,6 +66,9 @@ class UserController
      */
     public function actionLogin()
     {
+        // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
+        
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
         // Переменные для формы
@@ -123,6 +129,10 @@ class UserController
     }
 
     public function actionRecovery(){
+        
+        // Список категорий для левого меню
+        $categories = Category::getCategoriesList();
+        
 
         $totalPrice = CartHeader::getPrice();
         $totalCount = CartHeader::getTotal();
